@@ -1,0 +1,71 @@
+{
+  "project": "demo_PhenoBrain",
+  "branchName": "ralph/additional-baseline-expansion",
+  "description": "Finish the additional baseline expansion for the offline diagnosis example, including RBPModel and GDDPFisherModel registry wiring, BOQAModel runtime-safe enablement with 2022 HPO fallback, and quiet BOQA subprocess execution.",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Add RBPModel to the candidate registry",
+      "description": "As a user of the offline diagnosis example, I want RBPModel included in the dynamic ensemble so that the script can use the next locally constructible baseline.",
+      "acceptanceCriteria": [
+        "Update `timgroup_disease_diagnosis/codes/core/core/script/example_predict_ensemble.py` so `MODEL_CANDIDATES` includes `RBPModel` after `MinICModel`",
+        "Add a builder for `RBPModel(hpo_reader=hpo_reader_with_all_hpo, model_name='RBPModel')` in `build_available_models()`",
+        "Add focused tests in `timgroup_disease_diagnosis/codes/core/tests/test_example_predict_ensemble.py` asserting candidate presence and inclusion when availability is forced",
+        "Run targeted pytest for the RBPModel stories and keep it green",
+        "Tests pass",
+        "Typecheck passes"
+      ],
+      "priority": 1,
+      "passes": true,
+      "notes": "Implemented in main workspace. Added RBPModel candidate, builder, and focused tests."
+    },
+    {
+      "id": "US-002",
+      "title": "Add GDDPFisherModel to the candidate registry",
+      "description": "As a user of the offline diagnosis example, I want GDDPFisherModel included in the dynamic ensemble so that the expanded offline ensemble uses the next practical similarity baseline.",
+      "acceptanceCriteria": [
+        "Update `timgroup_disease_diagnosis/codes/core/core/script/example_predict_ensemble.py` so `MODEL_CANDIDATES` includes `GDDPFisherModel` after `RBPModel`",
+        "Add a builder for `GDDPFisherModel(hpo_reader=hpo_reader_with_all_hpo, model_name='GDDPFisherModel')` in `build_available_models()`",
+        "Extend `timgroup_disease_diagnosis/codes/core/tests/test_example_predict_ensemble.py` so the default available-model and wiring assertions include `GDDPFisherModel`",
+        "Run targeted pytest for the GDDPFisherModel stories and keep it green",
+        "Tests pass",
+        "Typecheck passes"
+      ],
+      "priority": 2,
+      "passes": true,
+      "notes": "Implemented in main workspace. Added GDDPFisherModel candidate, builder, and regression coverage."
+    },
+    {
+      "id": "US-003",
+      "title": "Add runtime-safe BOQAModel candidate gating",
+      "description": "As a maintainer, I want BOQAModel registered only when its external assets are present so that script startup does not crash on repositories missing the legacy BOQA inputs.",
+      "acceptanceCriteria": [
+        "Update `timgroup_disease_diagnosis/codes/core/core/script/example_predict_ensemble.py` so `BOQAModel` is represented as an optional candidate with an explicit availability check instead of an unconditional baseline",
+        "The BOQAModel availability check accepts legacy `2019` HPO raw files or the repository's `2022` fallback HPO raw files, plus the BOQA jar and `java`",
+        "Add tests in `timgroup_disease_diagnosis/codes/core/tests/test_example_predict_ensemble.py` covering candidate presence, false availability when legacy assets are missing, and inclusion when availability is forced",
+        "Run targeted pytest for the BOQAModel stories and keep it green",
+        "Tests pass",
+        "Typecheck passes"
+      ],
+      "priority": 3,
+      "passes": true,
+      "notes": "Implemented in main workspace. BOQAModel is runtime-gated, falls back to the repository's 2022 HPO assets when 2019 files are absent, and no longer blocks startup."
+    },
+    {
+      "id": "US-004",
+      "title": "Verify the expanded ensemble end to end and record completion notes",
+      "description": "As a maintainer, I want the expanded ensemble verified with regression tests and real script runs so that the remaining plan can be closed with concrete evidence.",
+      "acceptanceCriteria": [
+        "Run `PYTHONPATH=timgroup_disease_diagnosis/codes/core .venv/bin/python -m pytest timgroup_disease_diagnosis/codes/core/tests/test_example_predict_ensemble.py timgroup_disease_diagnosis/codes/core/tests/test_cycommon_fallback.py timgroup_disease_diagnosis/codes/core/tests/test_python312_compat.py timgroup_disease_diagnosis/codes/core/tests/test_boqa_model.py timgroup_disease_diagnosis/codes/core/tests/test_hpo_reader_paths.py -q` successfully",
+        "Run the default `example_predict_ensemble.py` script successfully and verify the quiet `Available models:` line includes `RBPModel`, `GDDPFisherModel`, and `BOQAModel` in the current repo snapshot",
+        "Run the CLI override `example_predict_ensemble.py --topk 3 --hpo-list HP:0001913,HP:0008513,HP:0001123` successfully and verify it prints a 3-row aligned table without raw tuple output",
+        "Add completion notes reflecting that BOQAModel now uses the 2022 HPO fallback and the quiet subprocess path",
+        "Tests pass",
+        "Typecheck passes"
+      ],
+      "priority": 4,
+      "passes": true,
+      "notes": "Verified with 40 passing focused tests plus successful default and CLI script runs. Completion notes were refreshed to reflect BOQAModel fallback and quiet subprocess execution."
+    }
+  ]
+}

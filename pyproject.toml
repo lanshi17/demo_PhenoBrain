@@ -1,0 +1,117 @@
+[project]
+name = "demo-phenobrain"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  # 基础环境
+  "jupyterlab>=4.5.6",
+  "ipykernel>=6.29,<7",
+  # 常用科学计算
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "matplotlib>=3.8,<4",
+  "seaborn>=0.13,<1",
+  "gdown>=5.2.1",
+  "scipy>=1.17.1",
+  "scikit-learn>=1.8.0",
+  "joblib>=1.5.3",
+  "pyemd>=2.0.0",
+  "zhon>=2.1.1",
+  "statsmodels>=0.14.6",
+  "dabest>=0.2.5",
+  "rdflib>=7.6.0",
+]
+[project.optional-dependencies]
+# ------------------------------------------------------------
+# 核心增强：编辑器 / 代码质量 / 交互能力
+# ------------------------------------------------------------
+enhanced = [
+  # 代码格式化
+  "jupyterlab-code-formatter>=3,<4",
+  "black>=25.12.0,<27",
+
+  # LSP / 跳转定义 / 智能提示
+  "jupyterlab-lsp>=5.1.1,<6",
+  "jupyterlab-kernelspy",
+  "python-lsp-server[all]>=1.12,<2",
+
+  # 变量查看 / 调试辅助
+  "lckr-jupyterlab-variableinspector>=3.1,<4",
+  "sidecar>=0.7,<1",
+
+  # 交互能力
+  "ipywidgets>=8.1,<9",
+
+  # 常用界面增强
+  "jupyterlab-vim>=4,<5",
+  "jupyterlab-spellchecker>=0.8,<1",
+  "jupyterlab-quickopen>=0.2",
+  "jupyterlab-latex>=4,<5",
+  "jupyterlab-iframe>=0.2,<1",
+  "jupyterlab-templates",
+  "jupyterlab-commands>=0.1,<1",
+  "jupyterlab-notifications>=0.1,<1",
+  "jupyterlab-email>=0.3,<1",
+  "jupyterlab-executor>=2023.1.1",
+  "jupyterlab-autoversion>=0.2,<1",
+
+  # AI
+  "jupyter-ai[all]>=2,<3",
+
+  # 视觉 / 表格 / 数据查看
+  "voyager>=2,<3",
+
+
+]
+
+# ------------------------------------------------------------
+# 集成增强：外部服务 / 文件系统 / 管道 / GPU
+# ------------------------------------------------------------
+integrations = [
+  "elyra>=4,<5",
+  "genv>=0.12.0,<2",
+  "jupyter-fs>=0.4.1,<2",
+  "jupyter-panel-proxy==0.2.0",
+  "jupyterlab-tensorboard-pro>=0.8.0,<5",
+  "lineapy>=0.0.26,<1",
+
+  # 主题
+  "jupyterlab-miami-nights>=0.1,<1",
+]
+
+# ------------------------------------------------------------
+# 表格 / 数据探索
+# ------------------------------------------------------------
+tables = [
+  "buckaroo>=0.8,<1",
+  "ipydatagrid>=1.3,<2",
+  "ipysheet>=0.6,<1",
+  "qgrid>=1.3,<2",
+]
+
+# ------------------------------------------------------------
+# 版本控制 / Notebook diff / 质量检查
+# ------------------------------------------------------------
+vcs = [
+  "jupyterlab-git>=0.51.2,<0.52",
+  "databooks>=1.3.10",
+  "jupyter-nbrequirements>=0.1,<1",
+  "nbdime>=4,<5",
+  "nbqa>=1.9,<2",
+  "neptune>=1.10,<2",
+]
+
+# ------------------------------------------------------------
+# 测试
+# ------------------------------------------------------------
+testing = [
+  "ipytest>=0.14,<1",
+  "nbval>=0.11,<1",
+  "nosebook>=0.2,<1",
+  "sphinxcontrib-jupyter>=0.2,<1",
+  "treon>=0.1,<1",
+]
+[tool.uv]
+package = false

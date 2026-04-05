@@ -1,0 +1,12 @@
+# Ralph Progress
+
+project: demo_PhenoBrain
+branch: ralph/additional-baseline-expansion
+created: 2026-04-05
+
+Completed: 2026-04-05
+
+- US-001 complete: Added RBPModel candidate, builder, and tests.
+- US-002 complete: Added GDDPFisherModel candidate, builder, and regression coverage.
+- US-003 complete: Added BOQAModel runtime gating, 2022 HPO fallback support, and tests for missing legacy assets.
+- US-004 complete: Verified 40 focused tests pass, default and CLI script runs succeed, and BOQA Java execution is now quiet.
