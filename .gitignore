@@ -131,3 +131,6 @@ marimo/_static/
 # Project-local extras
 .autoversion
 .worktrees/
+
+# Local model assets
+timgroup_disease_diagnosis/codes/core/model/
