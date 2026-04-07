@@ -40,6 +40,8 @@ uv sync
 
 - `timgroup_disease_diagnosis/codes/core/core/script/example_predict_ensemble.py`
 
+> 注：`timgroup_disease_diagnosis/README.md` 仍保留上游研究项目说明；当前裁剪后的离线运行范围以本仓库根目录 `README.md` 为准。
+
 命令行示例：
 
 ```bash

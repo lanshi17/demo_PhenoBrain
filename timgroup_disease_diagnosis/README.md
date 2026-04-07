@@ -1,5 +1,7 @@
 # Phenotype Extraction & Disease Diagnosis
 
+> Historical upstream README: this file documents the original research project layout. For the current pruned offline runtime workflow in this repository, use the root `README.md` as the authoritative guide.
+
 Phenotype Extraction and Differential Diagnosis Pipeline in Diagnosing Rare Diseases Using EHRs
 
 

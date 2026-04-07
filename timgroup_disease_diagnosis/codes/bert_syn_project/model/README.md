@@ -1,2 +1,0 @@
-# Model
-- trained models' parameters
