@@ -52,13 +52,26 @@ timgroup_disease_diagnosis/codes/core/core/script/example_predict_ensemble.py \
   --hpo-list HP:0001913,HP:0008513,HP:0001123
 ```
 
+命令行参数（与脚本 `--help` 一致）：
+
+- `--topk`：返回数量，默认 `5`
+- `--hpo-list`：逗号分隔的 HPO 列表；不传时使用内置样例：
+  `HP:0001913,HP:0008513,HP:0001123,HP:0000365,HP:0002857,HP:0001744`
+
 脚本会：
 
 - 动态检查当前可用模型
 - 构建外层 `Ensemble`
-- 输出安静的结果表
+- 在启动时打印 `Available models: ...`
+- 输出安静的结果表（列为 `Rank`、`Disease`、`Score`，`Score` 保留 6 位小数）
 
 当前外层总集成已改为 **order-statistic / Stuart** 融合，显示的 `Score` 列是外层 `-log(Z)` 融合分数。
+
+补充说明：
+
+- 当可用模型数为 `1` 时，直接返回该模型，不构建外层集成
+- 当可用模型数大于 `1` 时，构建 `OrderStatisticMultiModel(model_name='Ensemble')`
+- 当无可用模型时，抛出 `RuntimeError: No diagnosis models are available for offline prediction.`
 
 ### 当前候选模型
 
@@ -78,6 +91,13 @@ timgroup_disease_diagnosis/codes/core/core/script/example_predict_ensemble.py \
 
 - 内层小集成仍使用原有 `OrderedMultiModel`
 - 只有最外层 `Ensemble` 使用 order-statistic 融合
+
+候选模型的可用性判定（代码逻辑）：
+
+- `ICTODQAcross-Ave-Random`、`HPOProbMNB-Random`、`MICAModel`、`MICALinModel`、`MICAJCModel`、`MinICModel`、`RBPModel`、`GDDPFisherModel` 为基线候选
+- `CNB-Random` 需要 `CNB.joblib`（兼容两种目录布局）
+- `NN-Mixup-Random-1` 需要 TensorFlow checkpoint 文件（兼容两种目录布局）；若缺少 `core.predict.ml_model` 依赖会被自动跳过
+- `BOQAModel` 需要同时满足：`java` 可执行、`boqa.jar` 存在、HPO 原始文件可用（优先 2019 路径，缺失时回退到 2022 路径）
 
 ## 数据与模型资产
 
@@ -104,6 +124,7 @@ PYTHONPATH=timgroup_disease_diagnosis/codes/core \
   timgroup_disease_diagnosis/codes/core/tests/test_boqa_model.py \
   timgroup_disease_diagnosis/codes/core/tests/test_hpo_reader_paths.py \
   timgroup_disease_diagnosis/codes/core/tests/test_order_statistic_multi_model.py \
+  tests/test_pruned_runtime_layout.py \
   tests/test_jupyter_setup.py -q
 ```
 
