@@ -111,6 +111,63 @@ timgroup_disease_diagnosis/codes/core/core/script/example_predict_ensemble.py \
 
 仓库中仍有一部分超过 `10MB` 的非模型文件通过 Git LFS 管理。
 
+## 作为 Library 迁移到其他项目
+
+推荐把本仓库作为离线诊断 library 迁移时，采用“代码包 + 外部资产目录”的方式，不要只复制 Python 文件。
+
+### 迁移 SOP
+
+1. **固定可运行版本**
+   - 在本仓库先跑通离线预测和 MME 金标准回归测试。
+   - 记录 Python、`uv.lock`、TensorFlow、SciPy、Java 等运行环境。
+2. **拆分代码与资产**
+   - 代码迁移到目标项目的 `libs/phenobrain_diagnosis/` 或独立 package。
+   - `data/`、`model/` 等大文件资产放在外部资产目录，由配置传入。
+3. **封装稳定 API**
+   - 目标项目不要直接依赖深层 `core.*` 内部路径。
+   - 建议封装 `DiagnosisEngine.single(...)` 和 `DiagnosisEngine.ensemble(...)` 两类入口。
+4. **参数化资产路径**
+   - 通过初始化参数或环境变量传入 `data_dir`、`model_dir`。
+   - 避免在目标项目中依赖当前仓库的绝对路径。
+5. **集中处理兼容层**
+   - `NN-Mixup-1` 是 TensorFlow 1 风格模型，在 TensorFlow 2 环境下需要 `tf.compat.v1` 兼容层。
+   - 新版 SciPy 缺少 `scipy.stats.binom_test` 时需要兼容 shim。
+6. **启动前做资产完整性检查**
+   - 检查关键 JSON、NPZ、Numpy、Joblib、TensorFlow checkpoint 文件存在。
+   - 检查文件不是 Git LFS pointer；如果文件头是 `version https://git-lfs.github.com/spec/v1`，说明资产未下载完整。
+7. **标准化输入输出**
+   - 输入统一为 HPO ID 列表，例如 `['HP:0008773', 'HP:0000413']`。
+   - 输出建议包含 `RD:*`、对应 `SOURCE_CODES`（如 `OMIM:*`、`ORPHA:*`）和 score。
+   - 对模型词表外 HPO 做过滤，并返回 `ignored_hpo_terms` 方便排查。
+8. **迁移后跑回归测试**
+   - 使用 `data/inputs/MME.benchmark_patients.questions.json` 和 `data/inputs/MME.benchmark_patients.answers.json` 验证 top-k 指标。
+   - 迁移后的 rank/top-k 结果应与本仓库基准一致或只有可解释的微小差异。
+
+### 推荐外部资产检查清单
+
+- `timgroup_disease_diagnosis/codes/core/data/preprocess/knowledge/HPO/dis_to_hpo_prob_hpoa.json`
+- `timgroup_disease_diagnosis/codes/core/data/preprocess/knowledge/disease-mix/rd_dict.json`
+- `timgroup_disease_diagnosis/codes/core/model/INTEGRATE_CCRD_OMIM_ORPHA/ICTODQAcrossModel/ICTODQAcross-Ave/dis_vec_mat.npz`
+- `timgroup_disease_diagnosis/codes/core/model/INTEGRATE_CCRD_OMIM_ORPHA/CNBModel/CNB.joblib`
+- `timgroup_disease_diagnosis/codes/core/model/INTEGRATE_CCRD_OMIM_ORPHA/NN-Mixup-1/config.json`
+- `timgroup_disease_diagnosis/codes/core/model/INTEGRATE_CCRD_OMIM_ORPHA/NN-Mixup-1/model.ckpt.index`
+- `timgroup_disease_diagnosis/codes/core/model/INTEGRATE_CCRD_OMIM_ORPHA/NN-Mixup-1/model.ckpt.data-00000-of-00001`
+
+### MME 回归基准
+
+当前 MME 金标准评估集包含 `43` 个有答案病例。四模型外层集成使用：
+
+- `ICTODQAcross-Ave`
+- `HPOProbMNB`
+- `CNB`
+- `NN-Mixup-1`
+
+融合方式为 `OrderStatisticMultiModel`。
+
+| Model | top1 | top3 | top5 | top10 | top30 |
+|---|---:|---:|---:|---:|---:|
+| Ensemble(ICTODQAcross-Ave, HPOProbMNB, CNB, NN-Mixup-1) | 21/43 (0.4884) | 31/43 (0.7209) | 33/43 (0.7674) | 35/43 (0.8140) | 39/43 (0.9070) |
+
 ## 验证
 
 当前聚焦测试命令：
