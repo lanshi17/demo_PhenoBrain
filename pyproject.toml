@@ -22,6 +22,7 @@ dependencies = [
   "statsmodels>=0.14.6",
   "dabest>=0.2.5",
   "rdflib>=7.6.0",
+  "tensorflow>=2.21.0",
 ]
 [project.optional-dependencies]
 # ------------------------------------------------------------
