@@ -1,3 +1,4 @@
+import gc
 import importlib.util
 import json
 from pathlib import Path
@@ -224,3 +225,24 @@ def test_print_models_suppresses_model_discovery_noise(monkeypatch, capsys):
     assert 'training...' not in captured.out
     assert 'MICAModel' in captured.out
     assert 'HPOP-ICT-CNB-NN' in captured.out
+
+
+def test_get_available_model_names_collects_delayed_model_teardown_noise(monkeypatch, capsys):
+    module = load_module()
+
+    class NoisyCyclicModel:
+        name = 'NN-Mixup-Random-1'
+
+        def __init__(self):
+            self.cycle = self
+
+        def __del__(self):
+            print('__del__ starts running...')
+
+    monkeypatch.setattr(module, 'build_available_models', lambda: [NoisyCyclicModel()])
+
+    names = module.run_quietly(module.get_available_model_names)
+    gc.collect()
+
+    assert names == ['NN-Mixup-Random-1']
+    assert '__del__ starts running...' not in capsys.readouterr().out

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import gc
 import io
 import json
 import logging
@@ -93,7 +94,11 @@ def run_quietly(fn, *args, **kwargs):
 def get_available_model_names():
     os.environ.setdefault('TF_CPP_MIN_LOG_LEVEL', '2')
     os.environ.setdefault('TF_ENABLE_ONEDNN_OPTS', '0')
-    return [model.name for model in build_available_models()]
+    models = build_available_models()
+    names = [model.name for model in models]
+    del models
+    gc.collect()
+    return names
 
 
 def build_outer_ensemble(models):
