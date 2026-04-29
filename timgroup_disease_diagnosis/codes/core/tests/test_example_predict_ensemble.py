@@ -298,6 +298,25 @@ def test_build_available_models_includes_cnb_when_asset_exists(tmp_path, monkeyp
     ]
 
 
+def test_build_available_models_includes_nn_mixup_from_integrated_flat_assets(tmp_path, monkeypatch):
+    module = load_module()
+    install_fake_core_modules(monkeypatch)
+    model_dir = tmp_path / 'model'
+    monkeypatch.setattr(module, '_MODEL_DIR', model_dir)
+    monkeypatch.setattr(module, '_PROJECT_CORE_DIR', tmp_path / 'core')
+    nn_folder = model_dir / 'INTEGRATE_CCRD_OMIM_ORPHA' / 'NN-Mixup-1'
+    touch(nn_folder / 'model.ckpt.index')
+    touch(nn_folder / 'model.ckpt.data-00000-of-00001')
+
+    models = module.build_available_models()
+    mlp_model = next(model for model in models if model.model_name == 'NN-Mixup-Random-1')
+
+    assert mlp_model.model_inits[0][2] == {
+        'model_name': 'NN-Mixup-1',
+        'save_folder': str(nn_folder),
+    }
+
+
 
 def test_build_available_models_includes_mica_family_and_minic_via_candidate_registry(tmp_path, monkeypatch):
     module = load_module()
@@ -669,10 +688,16 @@ def test_describe_available_models_reports_new_baselines(monkeypatch):
 
 
 
-def test_build_ensemble_model_uses_expected_wiring(monkeypatch):
+def test_build_ensemble_model_uses_expected_wiring(tmp_path, monkeypatch):
     module = load_module()
     fake_types = install_fake_core_modules(monkeypatch)
+    model_dir = tmp_path / 'model'
+    nn_folder = model_dir / 'INTEGRATE_CCRD_OMIM_ORPHA' / 'NN-Mixup-1'
+    monkeypatch.setattr(module, '_MODEL_DIR', model_dir)
     monkeypatch.setattr(module, '_is_candidate_available', lambda candidate: True)
+    touch(model_dir / 'CNBModel/CNB.joblib')
+    touch(nn_folder / 'model.ckpt.index')
+    touch(nn_folder / 'model.ckpt.data-00000-of-00001')
 
     ensemble = module.build_ensemble_model()
 
@@ -735,7 +760,10 @@ def test_build_ensemble_model_uses_expected_wiring(monkeypatch):
 
     assert mlp_model.model_inits[0][0] is fake_types['FakeLRNeuronModel']
     assert mlp_model.model_inits[0][1] == (mlp_model.hpo_reader, 'VEC_TYPE_0_1')
-    assert mlp_model.model_inits[0][2] == {'model_name': 'NN-Mixup-1'}
+    assert mlp_model.model_inits[0][2] == {
+        'model_name': 'NN-Mixup-1',
+        'save_folder': str(nn_folder),
+    }
 
     assert mica_model.model_name == 'MICAModel'
     assert mica_lin_model.model_name == 'MICALinModel'

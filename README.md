@@ -168,6 +168,18 @@ timgroup_disease_diagnosis/codes/core/core/script/example_predict_ensemble.py \
 |---|---:|---:|---:|---:|---:|
 | Ensemble(ICTODQAcross-Ave, HPOProbMNB, CNB, NN-Mixup-1) | 21/43 (0.4884) | 31/43 (0.7209) | 33/43 (0.7674) | 35/43 (0.8140) | 39/43 (0.9070) |
 
+### GA4GH 全量基准
+
+当前 GA4GH 全量评估集包含 `384` 个有答案病例。运行命令：
+
+```bash
+bash scripts/run_benchmark.sh
+```
+
+| Model | top1 | top3 | top5 | top10 | top30 |
+|---|---:|---:|---:|---:|---:|
+| Ensemble(ICTODQAcross-Ave, HPOProbMNB, CNB, NN-Mixup-1) | 1/384 (0.0026) | 5/384 (0.0130) | 7/384 (0.0182) | 12/384 (0.0312) | 20/384 (0.0521) |
+
 ## 验证
 
 当前聚焦测试命令：

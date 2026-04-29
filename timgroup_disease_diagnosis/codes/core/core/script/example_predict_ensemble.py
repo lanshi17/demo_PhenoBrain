@@ -26,8 +26,8 @@ _REQUIRED_ASSETS = (
     ('ICTODQAcross-Ave', Path('INTEGRATE_CCRD_OMIM_ORPHA/ICTODQAcrossModel/ICTODQAcross-Ave/dis_vec_mat.npz')),
     ('HPOProbMNB', Path('INTEGRATE_CCRD_OMIM_ORPHA/HPOProbMNBModel/HPOProbMNB/dis_hpo_ances_mat.npz')),
     ('CNB', Path('INTEGRATE_CCRD_OMIM_ORPHA/CNBModel/CNB.joblib')),
-    ('NN-Mixup-1 checkpoint index', Path('INTEGRATE_CCRD_OMIM_ORPHA/LRNeuronModel/NN-Mixup-1/model.ckpt.index')),
-    ('NN-Mixup-1 checkpoint data', Path('INTEGRATE_CCRD_OMIM_ORPHA/LRNeuronModel/NN-Mixup-1/model.ckpt.data-00000-of-00001')),
+    ('NN-Mixup-1 checkpoint index', Path('INTEGRATE_CCRD_OMIM_ORPHA/NN-Mixup-1/model.ckpt.index')),
+    ('NN-Mixup-1 checkpoint data', Path('INTEGRATE_CCRD_OMIM_ORPHA/NN-Mixup-1/model.ckpt.data-00000-of-00001')),
 )
 
 MODEL_CANDIDATES = [
@@ -46,6 +46,9 @@ MODEL_CANDIDATES = [
         'name': 'NN-Mixup-Random-1',
         'kind': 'optional',
         'required_asset_groups': [[
+            Path('INTEGRATE_CCRD_OMIM_ORPHA/NN-Mixup-1/model.ckpt.index'),
+            Path('INTEGRATE_CCRD_OMIM_ORPHA/NN-Mixup-1/model.ckpt.data-00000-of-00001'),
+        ], [
             Path('INTEGRATE_CCRD_OMIM_ORPHA/LRNeuronModel/NN-Mixup-1/model.ckpt.index'),
             Path('INTEGRATE_CCRD_OMIM_ORPHA/LRNeuronModel/NN-Mixup-1/model.ckpt.data-00000-of-00001'),
         ], [
@@ -184,14 +187,28 @@ def build_available_models():
         rm_no_use_hpo=True,
     )
 
+    def get_mlp_kwargs():
+        for relative_folder in (
+            Path('INTEGRATE_CCRD_OMIM_ORPHA/NN-Mixup-1'),
+            Path('INTEGRATE_CCRD_OMIM_ORPHA/LRNeuronModel/NN-Mixup-1'),
+            Path('NN-Mixup-1'),
+        ):
+            folder = _MODEL_DIR / relative_folder
+            if (folder / 'model.ckpt.index').exists() and (folder / 'model.ckpt.data-00000-of-00001').exists():
+                return {
+                    'model_name': 'NN-Mixup-1',
+                    'save_folder': str(folder),
+                }
+        return {
+            'model_name': 'NN-Mixup-1',
+        }
+
     def build_mlp_model():
         from core.predict.ml_model import LRNeuronModel
 
         return OrderedMultiModel(
             model_inits=[
-                (LRNeuronModel, (hpo_reader_rm_unused, VEC_TYPE_0_1), {
-                    'model_name': 'NN-Mixup-1',
-                }),
+                (LRNeuronModel, (hpo_reader_rm_unused, VEC_TYPE_0_1), get_mlp_kwargs()),
                 (RandomModel, (hpo_reader_rm_unused,), {'seed': 777}),
             ],
             hpo_reader=hpo_reader_rm_unused,

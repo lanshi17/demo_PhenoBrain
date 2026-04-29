@@ -1,8 +1,9 @@
 from core.utils.constant import OPTIMIZER_SGD, OPTIMIZER_ADAM, OPTIMIZER_RMS, RELU, TANH, SIGMOID, ATT_MULTIPLY, ATT_ADD, ATT_DOT, SEED
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 
+tf.disable_v2_behavior()
 tf.set_random_seed(SEED)
 
 def get_optimizer(type, lr):

@@ -1,4 +1,6 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+
+tf.disable_v2_behavior()
 import os
 import numpy as np
 import scipy.sparse as sp
@@ -220,9 +222,10 @@ class LRNeuronModel(TensorflowModel):
 
 
 	def get_l2_loss(self, c):
-
-		return tf.contrib.layers.apply_regularization(
-			tf.contrib.layers.l2_regularizer(c.w_decay), tf.trainable_variables())
+		variables = tf.trainable_variables()
+		if not variables:
+			return tf.constant(0.0, dtype=tf.float32)
+		return c.w_decay * tf.add_n([tf.nn.l2_loss(variable) for variable in variables])
 
 
 	def gen_summary(self, c):

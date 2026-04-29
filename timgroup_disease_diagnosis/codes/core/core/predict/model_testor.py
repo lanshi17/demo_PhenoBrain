@@ -11,7 +11,10 @@ import itertools
 from copy import deepcopy
 from time import time
 from collections import Counter
-from scipy.stats import wilcoxon, ranksums, mannwhitneyu, shapiro, binom_test
+try:
+	from scipy.stats import wilcoxon, ranksums, mannwhitneyu, shapiro, binom_test
+except ImportError:
+	from scipy.stats import wilcoxon, ranksums, mannwhitneyu, shapiro, binomtest as binom_test
 from core.utils.constant import TEST_DATA, VALIDATION_DATA, CUSTOM_DATA, VALIDATION_TEST_DATA, SEED
 from core.utils.constant import RESULT_PATH, PHELIST_REDUCE, SORT_P, SORT_P_S, SORT_S_P, DATA_PATH
 from core.utils.constant import DISORDER_GROUP_LEVEL, DISORDER_LEVEL, DISORDER_SUBTYPE_LEVEL, DISORDER_GROUP_LEAF_LEVEL
