@@ -180,6 +180,16 @@ bash scripts/run_benchmark.sh
 |---|---:|---:|---:|---:|---:|
 | Ensemble(ICTODQAcross-Ave, HPOProbMNB, CNB, NN-Mixup-1) | 1/384 (0.0026) | 5/384 (0.0130) | 7/384 (0.0182) | 12/384 (0.0312) | 20/384 (0.0521) |
 
+### 通用 benchmark CLI
+
+```bash
+uv run python scripts/benchmark.py
+uv run python scripts/benchmark.py --dataset MME --model MICAModel --ensemble none --metrics top1,top10
+uv run python scripts/benchmark.py --dataset GA4GH --ensemble HPOP-ICT-CNB-NN --metrics top1,top3,top5,top10,top30
+```
+
+默认行为：运行所有可用单模型 + `HPOP-ICT-CNB-NN` 集成模型，数据集为 `MME,GA4GH`，指标为 `top1,top3,top5,top10,top30`。
+
 ## 验证
 
 当前聚焦测试命令：
