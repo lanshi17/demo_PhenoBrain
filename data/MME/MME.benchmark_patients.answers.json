@@ -1,0 +1,417 @@
+[
+  {
+    "patient_id": "P0000079",
+    "answers": [
+      {
+        "omim_id": "MIM:610536",
+        "disease_name": "MANDIBULOFACIAL DYSOSTOSIS, GUION-ALMEIDA TYPE; MFDGA ;;MANDIBULOFACIAL DYSOSTOSIS WITH MICROCEPHALY; MFDM;; GROWTH AND MENTAL RETARDATION, MANDIBULOFACIAL DYSOSTOSIS, MICROCEPHALY, AND CLEFT PALATE"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0000083",
+    "answers": [
+      {
+        "omim_id": "MIM:614261",
+        "disease_name": "MICROCEPHALY-CAPILLARY MALFORMATION SYNDROME; MICCAP"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0000282",
+    "answers": [
+      {
+        "omim_id": "MIM:233400",
+        "disease_name": "PERRAULT SYNDROME 1; PRLTS1 ;;OVARIAN DYSGENESIS WITH SENSORINEURAL DEAFNESS;; GONADAL DYSGENESIS, XX TYPE, WITH DEAFNESS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0000333",
+    "answers": [
+      {
+        "omim_id": "MIM:615960",
+        "disease_name": "PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001009",
+    "answers": []
+  },
+  {
+    "patient_id": "P0001010",
+    "answers": []
+  },
+  {
+    "patient_id": "P0001011",
+    "answers": [
+      {
+        "omim_id": "MIM:614665",
+        "disease_name": "MECONIUM ILEUS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001012",
+    "answers": [
+      {
+        "omim_id": "MIM:614665",
+        "disease_name": "MECONIUM ILEUS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001013",
+    "answers": []
+  },
+  {
+    "patient_id": "P0001014",
+    "answers": []
+  },
+  {
+    "patient_id": "P0001015",
+    "answers": []
+  },
+  {
+    "patient_id": "P0001016",
+    "answers": [
+      {
+        "omim_id": "MIM:616007",
+        "disease_name": "CATARACTS, GROWTH HORMONE DEFICIENCY, SENSORY NEUROPATHY, SENSORINEURAL HEARING LOSS, AND SKELETAL DYSPLASIA; CAGSSS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001017",
+    "answers": [
+      {
+        "omim_id": "MIM:615960",
+        "disease_name": "PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001018",
+    "answers": [
+      {
+        "omim_id": "MIM:615960",
+        "disease_name": "PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001019",
+    "answers": [
+      {
+        "omim_id": "MIM:615960",
+        "disease_name": "PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001022",
+    "answers": [
+      {
+        "omim_id": "MIM:615960",
+        "disease_name": "PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001023",
+    "answers": [
+      {
+        "omim_id": "MIM:615960",
+        "disease_name": "PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001024",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001025",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001026",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001027",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001029",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001030",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001049",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001052",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001053",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001054",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001055",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001056",
+    "answers": [
+      {
+        "omim_id": "MIM:117650",
+        "disease_name": "CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001057",
+    "answers": [
+      {
+        "omim_id": "MIM:245570",
+        "disease_name": "EPILEPSY, FOCAL, WITH SPEECH DISORDER AND WITH OR WITHOUT MENTAL RETARDATION; FESD ;;APHASIA, ACQUIRED, WITH EPILEPSY LANDAU-KLEFFNER SYNDROME, INCLUDED; LKS, INCLUDED;; CONTINUOUS SPIKE AND WAVES DURING SLOW-WAVE SLEEP SYNDROME, INCLUDED; CSWS, INCLUDED; CSWSS, INCLUDED;; ROLANDIC EPILEPSY, MENTAL RETARDATION, AND SPEECH DYSPRAXIA, AUTOSOMAL DOMINANT, INCLUDED; RESDAD, INCLUDED; ADRESD, INCLUDED;; BENIGN EPILEPSY OF CHILDHOOD WITH CENTROTEMPORAL SPIKES, INCLUDED; BECTS, INCLUDED"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001058",
+    "answers": [
+      {
+        "omim_id": "MIM:250220",
+        "disease_name": "SPONDYLOMETAPHYSEAL DYSPLASIA, SEDAGHATIAN TYPE; SMDS ;;SEDAGHATIAN CHONDRODYSPLASIA;; METAPHYSEAL CHONDRODYSPLASIA, CONGENITAL LETHAL"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001059",
+    "answers": [
+      {
+        "omim_id": "MIM:250220",
+        "disease_name": "SPONDYLOMETAPHYSEAL DYSPLASIA, SEDAGHATIAN TYPE; SMDS ;;SEDAGHATIAN CHONDRODYSPLASIA;; METAPHYSEAL CHONDRODYSPLASIA, CONGENITAL LETHAL"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001060",
+    "answers": []
+  },
+  {
+    "patient_id": "P0001069",
+    "answers": [
+      {
+        "omim_id": "MIM:615273",
+        "disease_name": "CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001070",
+    "answers": [
+      {
+        "omim_id": "MIM:615273",
+        "disease_name": "CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001071",
+    "answers": [
+      {
+        "omim_id": "MIM:615273",
+        "disease_name": "CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001076",
+    "answers": [
+      {
+        "omim_id": "MIM:615273",
+        "disease_name": "CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001078",
+    "answers": [
+      {
+        "omim_id": "MIM:615273",
+        "disease_name": "CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001079",
+    "answers": [
+      {
+        "omim_id": "MIM:615273",
+        "disease_name": "CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001080",
+    "answers": [
+      {
+        "omim_id": "MIM:615273",
+        "disease_name": "CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001081",
+    "answers": [
+      {
+        "omim_id": "MIM:604317",
+        "disease_name": "MICROCEPHALY 2, PRIMARY, AUTOSOMAL RECESSIVE, WITH OR WITHOUT CORTICAL MALFORMATIONS; MCPH2"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001084",
+    "answers": [
+      {
+        "omim_id": "MIM:601338",
+        "disease_name": "CEREBELLAR ATAXIA, AREFLEXIA, PES CAVUS, OPTIC ATROPHY, AND SENSORINEURAL HEARING LOSS; CAPOS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001085",
+    "answers": [
+      {
+        "omim_id": "MIM:182212",
+        "disease_name": "SHPRINTZEN-GOLDBERG CRANIOSYNOSTOSIS SYNDROME; SGS ;;CRANIOSYNOSTOSIS WITH ARACHNODACTYLY AND ABDOMINAL HERNIAS;; MARFANOID DISORDER WITH CRANIOSYNOSTOSIS, TYPE I;; MARFANOID CRANIOSYNOSTOSIS SYNDROME"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001086",
+    "answers": [
+      {
+        "omim_id": "MIM:614105",
+        "disease_name": "METHYLMALONATE SEMIALDEHYDE DEHYDROGENASE DEFICIENCY; MMSDHD ;;MMSDH DEFICIENCY"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001091",
+    "answers": [
+      {
+        "omim_id": "MIM:269880",
+        "disease_name": "SHORT SYNDROME ;;SHORT STATURE, HYPEREXTENSIBILITY, HERNIA, OCULAR DEPRESSION, RIEGER ANOMALY, AND TEETHING DELAY;; LIPODYSTROPHY, PARTIAL, WITH RIEGER ANOMALY AND SHORT STATURE"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001105",
+    "answers": [
+      {
+        "omim_id": "MIM:613680",
+        "disease_name": "BEAULIEU-BOYCOTT-INNES SYNDROME; BBIS ;;MICROCEPHALY, MENTAL RETARDATION, AND DISTINCTIVE FACIES, WITH CARDIAC AND GENITOURINARY MALFORMATIONS"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001106",
+    "answers": [
+      {
+        "omim_id": "MIM:612541",
+        "disease_name": "NEUTROPENIA, SEVERE CONGENITAL, 4, AUTOSOMAL RECESSIVE; SCN4 DURSUN SYNDROME, INCLUDED;; PULMONARY ARTERIAL HYPERTENSION, LEUKOPENIA, AND ATRIAL SEPTAL DEFECT, INCLUDED"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001107",
+    "answers": [
+      {
+        "omim_id": "MIM:243150",
+        "disease_name": "INTESTINAL ATRESIA, MULTIPLE; MINAT ;;FAMILIAL INTESTINAL POLYATRESIA SYNDROME; FIPA"
+      }
+    ]
+  },
+  {
+    "patient_id": "P0001108",
+    "answers": []
+  },
+  {
+    "patient_id": "P0001135",
+    "answers": [
+      {
+        "omim_id": "MIM:615273",
+        "disease_name": "CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+      }
+    ]
+  }
+]

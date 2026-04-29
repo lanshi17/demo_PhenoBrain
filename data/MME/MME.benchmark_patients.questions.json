@@ -1,0 +1,2618 @@
+[
+  {
+    "patient_id": "P0000079",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0008773",
+        "hpo_name": "Aplasia/Hypoplasia of the middle ear"
+      },
+      {
+        "hpo_id": "HP:0000413",
+        "hpo_name": "Atresia of the external auditory canal"
+      },
+      {
+        "hpo_id": "HP:0000453",
+        "hpo_name": "Choanal atresia"
+      },
+      {
+        "hpo_id": "HP:0000405",
+        "hpo_name": "Conductive hearing impairment"
+      },
+      {
+        "hpo_id": "HP:0011451",
+        "hpo_name": "Congenital microcephaly"
+      },
+      {
+        "hpo_id": "HP:0011471",
+        "hpo_name": "Gastrostomy tube feeding in infancy"
+      },
+      {
+        "hpo_id": "HP:0010880",
+        "hpo_name": "Increased nuchal translucency"
+      },
+      {
+        "hpo_id": "HP:0000272",
+        "hpo_name": "Malar flattening"
+      },
+      {
+        "hpo_id": "HP:0000347",
+        "hpo_name": "Micrognathia"
+      },
+      {
+        "hpo_id": "HP:0008551",
+        "hpo_name": "Microtia"
+      },
+      {
+        "hpo_id": "HP:0011342",
+        "hpo_name": "Mild global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0000545",
+        "hpo_name": "Myopia"
+      },
+      {
+        "hpo_id": "HP:0000384",
+        "hpo_name": "Preauricular skin tag"
+      },
+      {
+        "hpo_id": "HP:0009623",
+        "hpo_name": "Proximal placement of thumb"
+      }
+    ],
+    "genes": [
+      "EFTUD2"
+    ]
+  },
+  {
+    "patient_id": "P0000083",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0100026",
+        "hpo_name": "Arteriovenous malformation"
+      },
+      {
+        "hpo_id": "HP:0003561",
+        "hpo_name": "Birth length less than 3rd percentile"
+      },
+      {
+        "hpo_id": "HP:0011451",
+        "hpo_name": "Congenital microcephaly"
+      },
+      {
+        "hpo_id": "HP:0009879",
+        "hpo_name": "Cortical gyral simplification"
+      },
+      {
+        "hpo_id": "HP:0011097",
+        "hpo_name": "Epileptic spasms"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0012469",
+        "hpo_name": "Infantile spasms"
+      },
+      {
+        "hpo_id": "HP:0001336",
+        "hpo_name": "Myoclonus"
+      },
+      {
+        "hpo_id": "HP:0000648",
+        "hpo_name": "Optic atrophy"
+      },
+      {
+        "hpo_id": "HP:0000253",
+        "hpo_name": "Progressive microcephaly"
+      },
+      {
+        "hpo_id": "HP:0001250",
+        "hpo_name": "Seizures"
+      },
+      {
+        "hpo_id": "HP:0009882",
+        "hpo_name": "Short distal phalanx of finger"
+      },
+      {
+        "hpo_id": "HP:0001857",
+        "hpo_name": "Short distal phalanx of toe"
+      },
+      {
+        "hpo_id": "HP:0001518",
+        "hpo_name": "Small for gestational age"
+      },
+      {
+        "hpo_id": "HP:0001285",
+        "hpo_name": "Spastic tetraparesis"
+      }
+    ],
+    "genes": [
+      "STAMBP"
+    ]
+  },
+  {
+    "patient_id": "P0000282",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0001284",
+        "hpo_name": "Areflexia"
+      },
+      {
+        "hpo_id": "HP:0003447",
+        "hpo_name": "Axonal loss"
+      },
+      {
+        "hpo_id": "HP:0001272",
+        "hpo_name": "Cerebellar atrophy"
+      },
+      {
+        "hpo_id": "HP:0002474",
+        "hpo_name": "Expressive language delay"
+      },
+      {
+        "hpo_id": "HP:0001765",
+        "hpo_name": "Hammertoe"
+      },
+      {
+        "hpo_id": "HP:0011096",
+        "hpo_name": "Peripheral demyelination"
+      },
+      {
+        "hpo_id": "HP:0200070",
+        "hpo_name": "Peripheral retinal atrophy"
+      },
+      {
+        "hpo_id": "HP:0001761",
+        "hpo_name": "Pes cavus"
+      },
+      {
+        "hpo_id": "HP:0007240",
+        "hpo_name": "Progressive gait ataxia"
+      },
+      {
+        "hpo_id": "HP:0000510",
+        "hpo_name": "Retinitis pigmentosa"
+      },
+      {
+        "hpo_id": "HP:0007141",
+        "hpo_name": "Sensorimotor neuropathy"
+      },
+      {
+        "hpo_id": "HP:0000407",
+        "hpo_name": "Sensorineural hearing impairment"
+      },
+      {
+        "hpo_id": "HP:0003474",
+        "hpo_name": "Sensory impairment"
+      },
+      {
+        "hpo_id": "HP:0009088",
+        "hpo_name": "Speech articulation difficulties"
+      }
+    ],
+    "genes": [
+      "HSD17B4"
+    ]
+  },
+  {
+    "patient_id": "P0000333",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0008058",
+        "hpo_name": "Aplasia/Hypoplasia of the optic nerve"
+      },
+      {
+        "hpo_id": "HP:0007033",
+        "hpo_name": "Cerebellar dysplasia"
+      },
+      {
+        "hpo_id": "HP:0002194",
+        "hpo_name": "Delayed gross motor development"
+      },
+      {
+        "hpo_id": "HP:0002281",
+        "hpo_name": "Gray matter heterotopias"
+      }
+    ],
+    "genes": [
+      "LAMA1"
+    ]
+  },
+  {
+    "patient_id": "P0001009",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0001644",
+        "hpo_name": "Dilated cardiomyopathy"
+      },
+      {
+        "hpo_id": "HP:0003325",
+        "hpo_name": "Limb-girdle muscle weakness"
+      },
+      {
+        "hpo_id": "HP:0000158",
+        "hpo_name": "Macroglossia"
+      },
+      {
+        "hpo_id": "HP:0002093",
+        "hpo_name": "Respiratory insufficiency"
+      },
+      {
+        "hpo_id": "HP:0002273",
+        "hpo_name": "Tetraparesis"
+      },
+      {
+        "hpo_id": "HP:0030284",
+        "hpo_name": "Triangular tongue"
+      }
+    ],
+    "genes": [
+      "LIMS2"
+    ]
+  },
+  {
+    "patient_id": "P0001010",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0008981",
+        "hpo_name": "Calf muscle hypertrophy"
+      },
+      {
+        "hpo_id": "HP:0001644",
+        "hpo_name": "Dilated cardiomyopathy"
+      },
+      {
+        "hpo_id": "HP:0000158",
+        "hpo_name": "Macroglossia"
+      },
+      {
+        "hpo_id": "HP:0003701",
+        "hpo_name": "Proximal muscle weakness"
+      },
+      {
+        "hpo_id": "HP:0030284",
+        "hpo_name": "Triangular tongue"
+      }
+    ],
+    "genes": [
+      "LIMS2"
+    ]
+  },
+  {
+    "patient_id": "P0001011",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0010943",
+        "hpo_name": "Echogenic fetal bowel"
+      },
+      {
+        "hpo_id": "HP:0004401",
+        "hpo_name": "Meconium ileus"
+      }
+    ],
+    "genes": [
+      "GUCY2C"
+    ]
+  },
+  {
+    "patient_id": "P0001012",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0010943",
+        "hpo_name": "Echogenic fetal bowel"
+      },
+      {
+        "hpo_id": "HP:0004401",
+        "hpo_name": "Meconium ileus"
+      }
+    ],
+    "genes": [
+      "GUCY2C"
+    ]
+  },
+  {
+    "patient_id": "P0001013",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0007965",
+        "hpo_name": "Absence of visual evoked potentials"
+      },
+      {
+        "hpo_id": "HP:0012430",
+        "hpo_name": "Cerebral white matter hypoplasia"
+      },
+      {
+        "hpo_id": "HP:0011185",
+        "hpo_name": "EEG with focal epileptiform discharges"
+      },
+      {
+        "hpo_id": "HP:0011198",
+        "hpo_name": "EEG with generalized epileptiform discharges"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0002079",
+        "hpo_name": "Hypoplasia of the corpus callosum"
+      },
+      {
+        "hpo_id": "HP:0000252",
+        "hpo_name": "Microcephaly"
+      },
+      {
+        "hpo_id": "HP:0000639",
+        "hpo_name": "Nystagmus"
+      },
+      {
+        "hpo_id": "HP:0012043",
+        "hpo_name": "Pendular nystagmus"
+      },
+      {
+        "hpo_id": "HP:0001250",
+        "hpo_name": "Seizures"
+      },
+      {
+        "hpo_id": "HP:0000572",
+        "hpo_name": "Visual loss"
+      }
+    ],
+    "genes": [
+      "KARS"
+    ]
+  },
+  {
+    "patient_id": "P0001014",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0001344",
+        "hpo_name": "Absent speech"
+      },
+      {
+        "hpo_id": "HP:0012430",
+        "hpo_name": "Cerebral white matter hypoplasia"
+      },
+      {
+        "hpo_id": "HP:0011198",
+        "hpo_name": "EEG with generalized epileptiform discharges"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0002079",
+        "hpo_name": "Hypoplasia of the corpus callosum"
+      },
+      {
+        "hpo_id": "HP:0000639",
+        "hpo_name": "Nystagmus"
+      },
+      {
+        "hpo_id": "HP:0001250",
+        "hpo_name": "Seizures"
+      },
+      {
+        "hpo_id": "HP:0000505",
+        "hpo_name": "Visual impairment"
+      }
+    ],
+    "genes": [
+      "KARS"
+    ]
+  },
+  {
+    "patient_id": "P0001015",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0002059",
+        "hpo_name": "Cerebral atrophy"
+      },
+      {
+        "hpo_id": "HP:0100704",
+        "hpo_name": "Cortical visual impairment"
+      },
+      {
+        "hpo_id": "HP:0011968",
+        "hpo_name": "Feeding difficulties"
+      },
+      {
+        "hpo_id": "HP:0001290",
+        "hpo_name": "Generalized hypotonia"
+      },
+      {
+        "hpo_id": "HP:0002069",
+        "hpo_name": "Generalized tonic-clonic seizures"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0002180",
+        "hpo_name": "Neurodegeneration"
+      },
+      {
+        "hpo_id": "HP:0002878",
+        "hpo_name": "Respiratory failure"
+      }
+    ],
+    "genes": [
+      "SYNJ1"
+    ]
+  },
+  {
+    "patient_id": "P0001016",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0008619",
+        "hpo_name": "Bilateral sensorineural hearing impairment"
+      },
+      {
+        "hpo_id": "HP:0000518",
+        "hpo_name": "Cataract"
+      },
+      {
+        "hpo_id": "HP:0002194",
+        "hpo_name": "Delayed gross motor development"
+      },
+      {
+        "hpo_id": "HP:0007067",
+        "hpo_name": "Distal peripheral sensory neuropathy"
+      },
+      {
+        "hpo_id": "HP:0002857",
+        "hpo_name": "Genu valgum"
+      },
+      {
+        "hpo_id": "HP:0000824",
+        "hpo_name": "Growth hormone deficiency"
+      },
+      {
+        "hpo_id": "HP:0005775",
+        "hpo_name": "Multiple skeletal anomalies"
+      },
+      {
+        "hpo_id": "HP:0000160",
+        "hpo_name": "Narrow mouth"
+      },
+      {
+        "hpo_id": "HP:0011220",
+        "hpo_name": "Prominent forehead"
+      },
+      {
+        "hpo_id": "HP:0003510",
+        "hpo_name": "Severe short stature"
+      },
+      {
+        "hpo_id": "HP:0000574",
+        "hpo_name": "Thick eyebrow"
+      },
+      {
+        "hpo_id": "HP:0002943",
+        "hpo_name": "Thoracic scoliosis"
+      }
+    ],
+    "genes": [
+      "IARS2"
+    ]
+  },
+  {
+    "patient_id": "P0001017",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0002418",
+        "hpo_name": "Abnormality of midbrain morphology"
+      },
+      {
+        "hpo_id": "HP:0011932",
+        "hpo_name": "Abnormality of the superior cerebellar peduncle"
+      },
+      {
+        "hpo_id": "HP:0001274",
+        "hpo_name": "Agenesis of corpus callosum"
+      },
+      {
+        "hpo_id": "HP:0002350",
+        "hpo_name": "Cerebellar cyst"
+      },
+      {
+        "hpo_id": "HP:0007033",
+        "hpo_name": "Cerebellar dysplasia"
+      },
+      {
+        "hpo_id": "HP:0001320",
+        "hpo_name": "Cerebellar vermis hypoplasia"
+      },
+      {
+        "hpo_id": "HP:0000750",
+        "hpo_name": "Delayed speech and language development"
+      },
+      {
+        "hpo_id": "HP:0002198",
+        "hpo_name": "Dilated fourth ventricle"
+      },
+      {
+        "hpo_id": "HP:0001090",
+        "hpo_name": "Large eyes"
+      },
+      {
+        "hpo_id": "HP:0001270",
+        "hpo_name": "Motor delay"
+      },
+      {
+        "hpo_id": "HP:0000639",
+        "hpo_name": "Nystagmus"
+      },
+      {
+        "hpo_id": "HP:0030283",
+        "hpo_name": "Partial absence of the septum pellucidum"
+      },
+      {
+        "hpo_id": "HP:0011003",
+        "hpo_name": "Severe Myopia"
+      },
+      {
+        "hpo_id": "HP:0000486",
+        "hpo_name": "Strabismus"
+      },
+      {
+        "hpo_id": "HP:0002119",
+        "hpo_name": "Ventriculomegaly"
+      }
+    ],
+    "genes": [
+      "LAMA1"
+    ]
+  },
+  {
+    "patient_id": "P0001018",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0007980",
+        "hpo_name": "Absent retinal pigment epithelium"
+      },
+      {
+        "hpo_id": "HP:0002350",
+        "hpo_name": "Cerebellar cyst"
+      },
+      {
+        "hpo_id": "HP:0007033",
+        "hpo_name": "Cerebellar dysplasia"
+      },
+      {
+        "hpo_id": "HP:0001320",
+        "hpo_name": "Cerebellar vermis hypoplasia"
+      },
+      {
+        "hpo_id": "HP:0002198",
+        "hpo_name": "Dilated fourth ventricle"
+      },
+      {
+        "hpo_id": "HP:0001090",
+        "hpo_name": "Large eyes"
+      },
+      {
+        "hpo_id": "HP:0001270",
+        "hpo_name": "Motor delay"
+      },
+      {
+        "hpo_id": "HP:0000545",
+        "hpo_name": "Myopia"
+      },
+      {
+        "hpo_id": "HP:0000639",
+        "hpo_name": "Nystagmus"
+      },
+      {
+        "hpo_id": "HP:0000486",
+        "hpo_name": "Strabismus"
+      }
+    ],
+    "genes": [
+      "LAMA1"
+    ]
+  },
+  {
+    "patient_id": "P0001019",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0004691",
+        "hpo_name": "2-3 toe syndactyly"
+      },
+      {
+        "hpo_id": "HP:0002418",
+        "hpo_name": "Abnormality of midbrain morphology"
+      },
+      {
+        "hpo_id": "HP:0007980",
+        "hpo_name": "Absent retinal pigment epithelium"
+      },
+      {
+        "hpo_id": "HP:0000646",
+        "hpo_name": "Amblyopia"
+      },
+      {
+        "hpo_id": "HP:0000729",
+        "hpo_name": "Autistic behavior"
+      },
+      {
+        "hpo_id": "HP:0000518",
+        "hpo_name": "Cataract"
+      },
+      {
+        "hpo_id": "HP:0002350",
+        "hpo_name": "Cerebellar cyst"
+      },
+      {
+        "hpo_id": "HP:0007033",
+        "hpo_name": "Cerebellar dysplasia"
+      },
+      {
+        "hpo_id": "HP:0001320",
+        "hpo_name": "Cerebellar vermis hypoplasia"
+      },
+      {
+        "hpo_id": "HP:0000750",
+        "hpo_name": "Delayed speech and language development"
+      },
+      {
+        "hpo_id": "HP:0002198",
+        "hpo_name": "Dilated fourth ventricle"
+      },
+      {
+        "hpo_id": "HP:0001090",
+        "hpo_name": "Large eyes"
+      },
+      {
+        "hpo_id": "HP:0001270",
+        "hpo_name": "Motor delay"
+      },
+      {
+        "hpo_id": "HP:0001105",
+        "hpo_name": "Retinal atrophy"
+      },
+      {
+        "hpo_id": "HP:0011003",
+        "hpo_name": "Severe Myopia"
+      },
+      {
+        "hpo_id": "HP:0030285",
+        "hpo_name": "Splayed superior cerebellar peduncle"
+      },
+      {
+        "hpo_id": "HP:0000486",
+        "hpo_name": "Strabismus"
+      }
+    ],
+    "genes": [
+      "LAMA1"
+    ]
+  },
+  {
+    "patient_id": "P0001022",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000479",
+        "hpo_name": "Abnormality of the retina"
+      },
+      {
+        "hpo_id": "HP:0007033",
+        "hpo_name": "Cerebellar dysplasia"
+      },
+      {
+        "hpo_id": "HP:0001320",
+        "hpo_name": "Cerebellar vermis hypoplasia"
+      },
+      {
+        "hpo_id": "HP:0000750",
+        "hpo_name": "Delayed speech and language development"
+      },
+      {
+        "hpo_id": "HP:0002198",
+        "hpo_name": "Dilated fourth ventricle"
+      },
+      {
+        "hpo_id": "HP:0001290",
+        "hpo_name": "Generalized hypotonia"
+      },
+      {
+        "hpo_id": "HP:0007068",
+        "hpo_name": "Inferior vermis hypoplasia"
+      },
+      {
+        "hpo_id": "HP:0001270",
+        "hpo_name": "Motor delay"
+      },
+      {
+        "hpo_id": "HP:0000545",
+        "hpo_name": "Myopia"
+      },
+      {
+        "hpo_id": "HP:0000657",
+        "hpo_name": "Oculomotor apraxia"
+      }
+    ],
+    "genes": [
+      "LAMA1"
+    ]
+  },
+  {
+    "patient_id": "P0001023",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000479",
+        "hpo_name": "Abnormality of the retina"
+      },
+      {
+        "hpo_id": "HP:0007033",
+        "hpo_name": "Cerebellar dysplasia"
+      },
+      {
+        "hpo_id": "HP:0000533",
+        "hpo_name": "Chorioretinal atrophy"
+      },
+      {
+        "hpo_id": "HP:0000750",
+        "hpo_name": "Delayed speech and language development"
+      },
+      {
+        "hpo_id": "HP:0001290",
+        "hpo_name": "Generalized hypotonia"
+      },
+      {
+        "hpo_id": "HP:0007068",
+        "hpo_name": "Inferior vermis hypoplasia"
+      },
+      {
+        "hpo_id": "HP:0001090",
+        "hpo_name": "Large eyes"
+      },
+      {
+        "hpo_id": "HP:0001270",
+        "hpo_name": "Motor delay"
+      },
+      {
+        "hpo_id": "HP:0000639",
+        "hpo_name": "Nystagmus"
+      },
+      {
+        "hpo_id": "HP:0000657",
+        "hpo_name": "Oculomotor apraxia"
+      },
+      {
+        "hpo_id": "HP:0011003",
+        "hpo_name": "Severe Myopia"
+      },
+      {
+        "hpo_id": "HP:0000486",
+        "hpo_name": "Strabismus"
+      }
+    ],
+    "genes": [
+      "LAMA1"
+    ]
+  },
+  {
+    "patient_id": "P0001024",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0003002",
+        "hpo_name": "Breast carcinoma"
+      },
+      {
+        "hpo_id": "HP:0000218",
+        "hpo_name": "High palate"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001025",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000175",
+        "hpo_name": "Cleft palate"
+      },
+      {
+        "hpo_id": "HP:0011968",
+        "hpo_name": "Feeding difficulties"
+      },
+      {
+        "hpo_id": "HP:0012418",
+        "hpo_name": "Hypoxemia"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      },
+      {
+        "hpo_id": "HP:0030282",
+        "hpo_name": "Posterior rib gap"
+      },
+      {
+        "hpo_id": "HP:0001328",
+        "hpo_name": "Specific learning disability"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001026",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000878",
+        "hpo_name": "11 pairs of ribs"
+      },
+      {
+        "hpo_id": "HP:0000670",
+        "hpo_name": "Carious teeth"
+      },
+      {
+        "hpo_id": "HP:0000494",
+        "hpo_name": "Downslanted palpebral fissures"
+      },
+      {
+        "hpo_id": "HP:0011968",
+        "hpo_name": "Feeding difficulties"
+      },
+      {
+        "hpo_id": "HP:0000218",
+        "hpo_name": "High palate"
+      },
+      {
+        "hpo_id": "HP:0030279",
+        "hpo_name": "Hypoplastic L5 vertebral pedicle"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      },
+      {
+        "hpo_id": "HP:0030282",
+        "hpo_name": "Posterior rib gap"
+      },
+      {
+        "hpo_id": "HP:0001328",
+        "hpo_name": "Specific learning disability"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001027",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0002072",
+        "hpo_name": "Chorea"
+      },
+      {
+        "hpo_id": "HP:0000175",
+        "hpo_name": "Cleft palate"
+      },
+      {
+        "hpo_id": "HP:0000494",
+        "hpo_name": "Downslanted palpebral fissures"
+      },
+      {
+        "hpo_id": "HP:0000316",
+        "hpo_name": "Hypertelorism"
+      },
+      {
+        "hpo_id": "HP:0002011",
+        "hpo_name": "Morphological abnormality of the central nervous system"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      },
+      {
+        "hpo_id": "HP:0030282",
+        "hpo_name": "Posterior rib gap"
+      },
+      {
+        "hpo_id": "HP:0002091",
+        "hpo_name": "Restrictive lung disease"
+      },
+      {
+        "hpo_id": "HP:0001257",
+        "hpo_name": "Spasticity"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001029",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0012306",
+        "hpo_name": "Abnormal rib ossification"
+      },
+      {
+        "hpo_id": "HP:0000453",
+        "hpo_name": "Choanal atresia"
+      },
+      {
+        "hpo_id": "HP:0000175",
+        "hpo_name": "Cleft palate"
+      },
+      {
+        "hpo_id": "HP:0000476",
+        "hpo_name": "Cystic hygroma"
+      },
+      {
+        "hpo_id": "HP:0001631",
+        "hpo_name": "Defect in the atrial septum"
+      },
+      {
+        "hpo_id": "HP:0001040",
+        "hpo_name": "Multiple pterygia"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      },
+      {
+        "hpo_id": "HP:0002650",
+        "hpo_name": "Scoliosis"
+      },
+      {
+        "hpo_id": "HP:0000465",
+        "hpo_name": "Webbed neck"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001030",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000765",
+        "hpo_name": "Abnormality of the thorax"
+      },
+      {
+        "hpo_id": "HP:0000218",
+        "hpo_name": "High palate"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001049",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000175",
+        "hpo_name": "Cleft palate"
+      },
+      {
+        "hpo_id": "HP:0000405",
+        "hpo_name": "Conductive hearing impairment"
+      },
+      {
+        "hpo_id": "HP:0000824",
+        "hpo_name": "Growth hormone deficiency"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      },
+      {
+        "hpo_id": "HP:0030282",
+        "hpo_name": "Posterior rib gap"
+      },
+      {
+        "hpo_id": "HP:0002650",
+        "hpo_name": "Scoliosis"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001052",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0002025",
+        "hpo_name": "Anal stenosis"
+      },
+      {
+        "hpo_id": "HP:0000175",
+        "hpo_name": "Cleft palate"
+      },
+      {
+        "hpo_id": "HP:0100543",
+        "hpo_name": "Cognitive impairment"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      },
+      {
+        "hpo_id": "HP:0002650",
+        "hpo_name": "Scoliosis"
+      },
+      {
+        "hpo_id": "HP:0000883",
+        "hpo_name": "Thin ribs"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001053",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0030300",
+        "hpo_name": "10 pairs of ribs"
+      },
+      {
+        "hpo_id": "HP:0000175",
+        "hpo_name": "Cleft palate"
+      },
+      {
+        "hpo_id": "HP:0001631",
+        "hpo_name": "Defect in the atrial septum"
+      },
+      {
+        "hpo_id": "HP:0011968",
+        "hpo_name": "Feeding difficulties"
+      },
+      {
+        "hpo_id": "HP:0004719",
+        "hpo_name": "Hyperechogenic kidneys"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      },
+      {
+        "hpo_id": "HP:0030282",
+        "hpo_name": "Posterior rib gap"
+      },
+      {
+        "hpo_id": "HP:0002093",
+        "hpo_name": "Respiratory insufficiency"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001054",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0030300",
+        "hpo_name": "10 pairs of ribs"
+      },
+      {
+        "hpo_id": "HP:0000175",
+        "hpo_name": "Cleft palate"
+      },
+      {
+        "hpo_id": "HP:0000204",
+        "hpo_name": "Cleft upper lip"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      },
+      {
+        "hpo_id": "HP:0030282",
+        "hpo_name": "Posterior rib gap"
+      },
+      {
+        "hpo_id": "HP:0002880",
+        "hpo_name": "Respiratory difficulties"
+      },
+      {
+        "hpo_id": "HP:0002650",
+        "hpo_name": "Scoliosis"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001055",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000405",
+        "hpo_name": "Conductive hearing impairment"
+      },
+      {
+        "hpo_id": "HP:0001631",
+        "hpo_name": "Defect in the atrial septum"
+      },
+      {
+        "hpo_id": "HP:0011968",
+        "hpo_name": "Feeding difficulties"
+      },
+      {
+        "hpo_id": "HP:0000540",
+        "hpo_name": "Hypermetropia"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      },
+      {
+        "hpo_id": "HP:0030282",
+        "hpo_name": "Posterior rib gap"
+      },
+      {
+        "hpo_id": "HP:0002880",
+        "hpo_name": "Respiratory difficulties"
+      },
+      {
+        "hpo_id": "HP:0002650",
+        "hpo_name": "Scoliosis"
+      },
+      {
+        "hpo_id": "HP:0000486",
+        "hpo_name": "Strabismus"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001056",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000878",
+        "hpo_name": "11 pairs of ribs"
+      },
+      {
+        "hpo_id": "HP:0000175",
+        "hpo_name": "Cleft palate"
+      },
+      {
+        "hpo_id": "HP:0000405",
+        "hpo_name": "Conductive hearing impairment"
+      },
+      {
+        "hpo_id": "HP:0000201",
+        "hpo_name": "Pierre-Robin sequence"
+      },
+      {
+        "hpo_id": "HP:0030282",
+        "hpo_name": "Posterior rib gap"
+      },
+      {
+        "hpo_id": "HP:0002650",
+        "hpo_name": "Scoliosis"
+      },
+      {
+        "hpo_id": "HP:0000883",
+        "hpo_name": "Thin ribs"
+      }
+    ],
+    "genes": [
+      "SNRPB"
+    ]
+  },
+  {
+    "patient_id": "P0001057",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0011347",
+        "hpo_name": "Abnormality of ocular abduction"
+      },
+      {
+        "hpo_id": "HP:0000337",
+        "hpo_name": "Broad forehead"
+      },
+      {
+        "hpo_id": "HP:0009765",
+        "hpo_name": "Low hanging columella"
+      },
+      {
+        "hpo_id": "HP:0000272",
+        "hpo_name": "Malar flattening"
+      },
+      {
+        "hpo_id": "HP:0000160",
+        "hpo_name": "Narrow mouth"
+      },
+      {
+        "hpo_id": "HP:0000639",
+        "hpo_name": "Nystagmus"
+      },
+      {
+        "hpo_id": "HP:0007930",
+        "hpo_name": "Prominent epicanthal folds"
+      },
+      {
+        "hpo_id": "HP:0001250",
+        "hpo_name": "Seizures"
+      },
+      {
+        "hpo_id": "HP:0011344",
+        "hpo_name": "Severe global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0003196",
+        "hpo_name": "Short nose"
+      }
+    ],
+    "genes": [
+      "GRIN2A"
+    ]
+  },
+  {
+    "patient_id": "P0001058",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0030306",
+        "hpo_name": "11 thoracic vertebrae"
+      },
+      {
+        "hpo_id": "HP:0001999",
+        "hpo_name": "Abnormal facial shape"
+      },
+      {
+        "hpo_id": "HP:0002104",
+        "hpo_name": "Apnea"
+      },
+      {
+        "hpo_id": "HP:0011675",
+        "hpo_name": "Arrhythmia"
+      },
+      {
+        "hpo_id": "HP:0001230",
+        "hpo_name": "Broad metacarpals"
+      },
+      {
+        "hpo_id": "HP:0006009",
+        "hpo_name": "Broad phalanx"
+      },
+      {
+        "hpo_id": "HP:0003180",
+        "hpo_name": "Flat acetabular roof"
+      },
+      {
+        "hpo_id": "HP:0002866",
+        "hpo_name": "Hypoplastic iliac wing"
+      },
+      {
+        "hpo_id": "HP:0003025",
+        "hpo_name": "Metaphyseal irregularity"
+      },
+      {
+        "hpo_id": "HP:0000926",
+        "hpo_name": "Platyspondyly"
+      },
+      {
+        "hpo_id": "HP:0008905",
+        "hpo_name": "Rhizomelia"
+      },
+      {
+        "hpo_id": "HP:0010049",
+        "hpo_name": "Short metacarpal"
+      },
+      {
+        "hpo_id": "HP:0008416",
+        "hpo_name": "Six lumbar vertebrae"
+      },
+      {
+        "hpo_id": "HP:0005257",
+        "hpo_name": "Thoracic hypoplasia"
+      }
+    ],
+    "genes": [
+      "GPX4"
+    ]
+  },
+  {
+    "patient_id": "P0001059",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0005108",
+        "hpo_name": "Abnormality of the intervertebral disk"
+      },
+      {
+        "hpo_id": "HP:0001678",
+        "hpo_name": "Atrioventricular block"
+      },
+      {
+        "hpo_id": "HP:0001321",
+        "hpo_name": "Cerebellar hypoplasia"
+      },
+      {
+        "hpo_id": "HP:0009879",
+        "hpo_name": "Cortical gyral simplification"
+      },
+      {
+        "hpo_id": "HP:0004273",
+        "hpo_name": "Cupped metaphyses of hand bones"
+      },
+      {
+        "hpo_id": "HP:0003180",
+        "hpo_name": "Flat acetabular roof"
+      },
+      {
+        "hpo_id": "HP:0001290",
+        "hpo_name": "Generalized hypotonia"
+      },
+      {
+        "hpo_id": "HP:0002123",
+        "hpo_name": "Generalized myoclonic seizures"
+      },
+      {
+        "hpo_id": "HP:0002079",
+        "hpo_name": "Hypoplasia of the corpus callosum"
+      },
+      {
+        "hpo_id": "HP:0000946",
+        "hpo_name": "Hypoplastic ilia"
+      },
+      {
+        "hpo_id": "HP:0100255",
+        "hpo_name": "Metaphyseal dysplasia"
+      },
+      {
+        "hpo_id": "HP:0003375",
+        "hpo_name": "Narrow greater sacrosciatic notches"
+      },
+      {
+        "hpo_id": "HP:0000926",
+        "hpo_name": "Platyspondyly"
+      },
+      {
+        "hpo_id": "HP:0002880",
+        "hpo_name": "Respiratory difficulties"
+      },
+      {
+        "hpo_id": "HP:0001248",
+        "hpo_name": "Short tubular bones (hand)"
+      }
+    ],
+    "genes": [
+      "GPX4"
+    ]
+  },
+  {
+    "patient_id": "P0001060",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0200128",
+        "hpo_name": "Biventricular hypertrophy"
+      },
+      {
+        "hpo_id": "HP:0003546",
+        "hpo_name": "Exercise intolerance"
+      },
+      {
+        "hpo_id": "HP:0003738",
+        "hpo_name": "Exercise-induced myalgia"
+      },
+      {
+        "hpo_id": "HP:0003348",
+        "hpo_name": "Hyperalaninemia"
+      },
+      {
+        "hpo_id": "HP:0002151",
+        "hpo_name": "Increased serum lactate"
+      },
+      {
+        "hpo_id": "HP:0011664",
+        "hpo_name": "Left ventricular noncompaction cardiomyopathy"
+      },
+      {
+        "hpo_id": "HP:0006970",
+        "hpo_name": "Periventricular leukomalacia"
+      }
+    ],
+    "genes": [
+      "GARS"
+    ]
+  },
+  {
+    "patient_id": "P0001069",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0100022",
+        "hpo_name": "Abnormality of movement"
+      },
+      {
+        "hpo_id": "HP:0000522",
+        "hpo_name": "Alacrima"
+      },
+      {
+        "hpo_id": "HP:0010605",
+        "hpo_name": "Chalazion"
+      },
+      {
+        "hpo_id": "HP:0002019",
+        "hpo_name": "Constipation"
+      },
+      {
+        "hpo_id": "HP:0002353",
+        "hpo_name": "EEG abnormality"
+      },
+      {
+        "hpo_id": "HP:0006254",
+        "hpo_name": "Elevated alpha-fetoprotein"
+      },
+      {
+        "hpo_id": "HP:0002910",
+        "hpo_name": "Elevated hepatic transaminases"
+      },
+      {
+        "hpo_id": "HP:0002171",
+        "hpo_name": "Gliosis"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0001395",
+        "hpo_name": "Hepatic fibrosis"
+      },
+      {
+        "hpo_id": "HP:0001252",
+        "hpo_name": "Muscular hypotonia"
+      },
+      {
+        "hpo_id": "HP:0009830",
+        "hpo_name": "Peripheral neuropathy"
+      },
+      {
+        "hpo_id": "HP:0012520",
+        "hpo_name": "Perivascular spaces"
+      },
+      {
+        "hpo_id": "HP:0006579",
+        "hpo_name": "Prolonged neonatal jaundice"
+      },
+      {
+        "hpo_id": "HP:0000495",
+        "hpo_name": "Recurrent corneal erosions"
+      },
+      {
+        "hpo_id": "HP:0001315",
+        "hpo_name": "Reduced tendon reflexes"
+      },
+      {
+        "hpo_id": "HP:0001250",
+        "hpo_name": "Seizures"
+      },
+      {
+        "hpo_id": "HP:0001773",
+        "hpo_name": "Short foot"
+      },
+      {
+        "hpo_id": "HP:0200055",
+        "hpo_name": "Small hand"
+      }
+    ],
+    "genes": [
+      "NGLY1"
+    ]
+  },
+  {
+    "patient_id": "P0001070",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0100022",
+        "hpo_name": "Abnormality of movement"
+      },
+      {
+        "hpo_id": "HP:0000522",
+        "hpo_name": "Alacrima"
+      },
+      {
+        "hpo_id": "HP:0002019",
+        "hpo_name": "Constipation"
+      },
+      {
+        "hpo_id": "HP:0002353",
+        "hpo_name": "EEG abnormality"
+      },
+      {
+        "hpo_id": "HP:0002910",
+        "hpo_name": "Elevated hepatic transaminases"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0002151",
+        "hpo_name": "Increased serum lactate"
+      },
+      {
+        "hpo_id": "HP:0001511",
+        "hpo_name": "Intrauterine growth retardation"
+      },
+      {
+        "hpo_id": "HP:0000252",
+        "hpo_name": "Microcephaly"
+      },
+      {
+        "hpo_id": "HP:0001252",
+        "hpo_name": "Muscular hypotonia"
+      },
+      {
+        "hpo_id": "HP:0009830",
+        "hpo_name": "Peripheral neuropathy"
+      },
+      {
+        "hpo_id": "HP:0000495",
+        "hpo_name": "Recurrent corneal erosions"
+      },
+      {
+        "hpo_id": "HP:0001315",
+        "hpo_name": "Reduced tendon reflexes"
+      },
+      {
+        "hpo_id": "HP:0002650",
+        "hpo_name": "Scoliosis"
+      }
+    ],
+    "genes": [
+      "NGLY1"
+    ]
+  },
+  {
+    "patient_id": "P0001071",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0006958",
+        "hpo_name": "Abnormal auditory evoked potentials"
+      },
+      {
+        "hpo_id": "HP:0100022",
+        "hpo_name": "Abnormality of movement"
+      },
+      {
+        "hpo_id": "HP:0000522",
+        "hpo_name": "Alacrima"
+      },
+      {
+        "hpo_id": "HP:0010605",
+        "hpo_name": "Chalazion"
+      },
+      {
+        "hpo_id": "HP:0002019",
+        "hpo_name": "Constipation"
+      },
+      {
+        "hpo_id": "HP:0012448",
+        "hpo_name": "Delayed myelination"
+      },
+      {
+        "hpo_id": "HP:0002353",
+        "hpo_name": "EEG abnormality"
+      },
+      {
+        "hpo_id": "HP:0006254",
+        "hpo_name": "Elevated alpha-fetoprotein"
+      },
+      {
+        "hpo_id": "HP:0002910",
+        "hpo_name": "Elevated hepatic transaminases"
+      },
+      {
+        "hpo_id": "HP:0002171",
+        "hpo_name": "Gliosis"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0001395",
+        "hpo_name": "Hepatic fibrosis"
+      },
+      {
+        "hpo_id": "HP:0002151",
+        "hpo_name": "Increased serum lactate"
+      },
+      {
+        "hpo_id": "HP:0001511",
+        "hpo_name": "Intrauterine growth retardation"
+      },
+      {
+        "hpo_id": "HP:0001252",
+        "hpo_name": "Muscular hypotonia"
+      },
+      {
+        "hpo_id": "HP:0012520",
+        "hpo_name": "Perivascular spaces"
+      },
+      {
+        "hpo_id": "HP:0006579",
+        "hpo_name": "Prolonged neonatal jaundice"
+      },
+      {
+        "hpo_id": "HP:0000495",
+        "hpo_name": "Recurrent corneal erosions"
+      },
+      {
+        "hpo_id": "HP:0001315",
+        "hpo_name": "Reduced tendon reflexes"
+      },
+      {
+        "hpo_id": "HP:0002650",
+        "hpo_name": "Scoliosis"
+      },
+      {
+        "hpo_id": "HP:0001250",
+        "hpo_name": "Seizures"
+      },
+      {
+        "hpo_id": "HP:0001773",
+        "hpo_name": "Short foot"
+      },
+      {
+        "hpo_id": "HP:0200055",
+        "hpo_name": "Small hand"
+      },
+      {
+        "hpo_id": "HP:0000486",
+        "hpo_name": "Strabismus"
+      }
+    ],
+    "genes": [
+      "NGLY1"
+    ]
+  },
+  {
+    "patient_id": "P0001076",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0002418",
+        "hpo_name": "Abnormality of midbrain morphology"
+      },
+      {
+        "hpo_id": "HP:0100022",
+        "hpo_name": "Abnormality of movement"
+      },
+      {
+        "hpo_id": "HP:0000522",
+        "hpo_name": "Alacrima"
+      },
+      {
+        "hpo_id": "HP:0009085",
+        "hpo_name": "Alveolar ridge overgrowth"
+      },
+      {
+        "hpo_id": "HP:0002019",
+        "hpo_name": "Constipation"
+      },
+      {
+        "hpo_id": "HP:0002353",
+        "hpo_name": "EEG abnormality"
+      },
+      {
+        "hpo_id": "HP:0006254",
+        "hpo_name": "Elevated alpha-fetoprotein"
+      },
+      {
+        "hpo_id": "HP:0000286",
+        "hpo_name": "Epicanthus"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0000218",
+        "hpo_name": "High palate"
+      },
+      {
+        "hpo_id": "HP:0002151",
+        "hpo_name": "Increased serum lactate"
+      },
+      {
+        "hpo_id": "HP:0001511",
+        "hpo_name": "Intrauterine growth retardation"
+      },
+      {
+        "hpo_id": "HP:0000252",
+        "hpo_name": "Microcephaly"
+      },
+      {
+        "hpo_id": "HP:0000347",
+        "hpo_name": "Micrognathia"
+      },
+      {
+        "hpo_id": "HP:0001252",
+        "hpo_name": "Muscular hypotonia"
+      },
+      {
+        "hpo_id": "HP:0009830",
+        "hpo_name": "Peripheral neuropathy"
+      },
+      {
+        "hpo_id": "HP:0006579",
+        "hpo_name": "Prolonged neonatal jaundice"
+      },
+      {
+        "hpo_id": "HP:0000508",
+        "hpo_name": "Ptosis"
+      },
+      {
+        "hpo_id": "HP:0001315",
+        "hpo_name": "Reduced tendon reflexes"
+      },
+      {
+        "hpo_id": "HP:0002650",
+        "hpo_name": "Scoliosis"
+      },
+      {
+        "hpo_id": "HP:0001250",
+        "hpo_name": "Seizures"
+      },
+      {
+        "hpo_id": "HP:0001773",
+        "hpo_name": "Short foot"
+      },
+      {
+        "hpo_id": "HP:0003196",
+        "hpo_name": "Short nose"
+      },
+      {
+        "hpo_id": "HP:0200055",
+        "hpo_name": "Small hand"
+      },
+      {
+        "hpo_id": "HP:0009891",
+        "hpo_name": "Underdeveloped supraorbital ridges"
+      },
+      {
+        "hpo_id": "HP:0002119",
+        "hpo_name": "Ventriculomegaly"
+      }
+    ],
+    "genes": [
+      "NGLY1"
+    ]
+  },
+  {
+    "patient_id": "P0001078",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0100022",
+        "hpo_name": "Abnormality of movement"
+      },
+      {
+        "hpo_id": "HP:0006956",
+        "hpo_name": "Dilation of lateral ventricles"
+      },
+      {
+        "hpo_id": "HP:0002353",
+        "hpo_name": "EEG abnormality"
+      },
+      {
+        "hpo_id": "HP:0000286",
+        "hpo_name": "Epicanthus"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0001395",
+        "hpo_name": "Hepatic fibrosis"
+      },
+      {
+        "hpo_id": "HP:0001511",
+        "hpo_name": "Intrauterine growth retardation"
+      },
+      {
+        "hpo_id": "HP:0000252",
+        "hpo_name": "Microcephaly"
+      },
+      {
+        "hpo_id": "HP:0001252",
+        "hpo_name": "Muscular hypotonia"
+      },
+      {
+        "hpo_id": "HP:0006579",
+        "hpo_name": "Prolonged neonatal jaundice"
+      },
+      {
+        "hpo_id": "HP:0003196",
+        "hpo_name": "Short nose"
+      }
+    ],
+    "genes": [
+      "NGLY1"
+    ]
+  },
+  {
+    "patient_id": "P0001079",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0100022",
+        "hpo_name": "Abnormality of movement"
+      },
+      {
+        "hpo_id": "HP:0000522",
+        "hpo_name": "Alacrima"
+      },
+      {
+        "hpo_id": "HP:0010605",
+        "hpo_name": "Chalazion"
+      },
+      {
+        "hpo_id": "HP:0011918",
+        "hpo_name": "Clinodactyly of the 4th toe"
+      },
+      {
+        "hpo_id": "HP:0001864",
+        "hpo_name": "Clinodactyly of the 5th toe"
+      },
+      {
+        "hpo_id": "HP:0002019",
+        "hpo_name": "Constipation"
+      },
+      {
+        "hpo_id": "HP:0002910",
+        "hpo_name": "Elevated hepatic transaminases"
+      },
+      {
+        "hpo_id": "HP:0000286",
+        "hpo_name": "Epicanthus"
+      },
+      {
+        "hpo_id": "HP:0002007",
+        "hpo_name": "Frontal bossing"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0002557",
+        "hpo_name": "Hypoplastic nipples"
+      },
+      {
+        "hpo_id": "HP:0000252",
+        "hpo_name": "Microcephaly"
+      },
+      {
+        "hpo_id": "HP:0001252",
+        "hpo_name": "Muscular hypotonia"
+      },
+      {
+        "hpo_id": "HP:0000657",
+        "hpo_name": "Oculomotor apraxia"
+      },
+      {
+        "hpo_id": "HP:0006579",
+        "hpo_name": "Prolonged neonatal jaundice"
+      },
+      {
+        "hpo_id": "HP:0005487",
+        "hpo_name": "Prominent metopic ridge"
+      },
+      {
+        "hpo_id": "HP:0001315",
+        "hpo_name": "Reduced tendon reflexes"
+      },
+      {
+        "hpo_id": "HP:0000486",
+        "hpo_name": "Strabismus"
+      },
+      {
+        "hpo_id": "HP:0001182",
+        "hpo_name": "Tapered finger"
+      },
+      {
+        "hpo_id": "HP:0010804",
+        "hpo_name": "Tented upper lip vermilion"
+      }
+    ],
+    "genes": [
+      "NGLY1"
+    ]
+  },
+  {
+    "patient_id": "P0001080",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0100022",
+        "hpo_name": "Abnormality of movement"
+      },
+      {
+        "hpo_id": "HP:0000522",
+        "hpo_name": "Alacrima"
+      },
+      {
+        "hpo_id": "HP:0002019",
+        "hpo_name": "Constipation"
+      },
+      {
+        "hpo_id": "HP:0000678",
+        "hpo_name": "Dental crowding"
+      },
+      {
+        "hpo_id": "HP:0002353",
+        "hpo_name": "EEG abnormality"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0002553",
+        "hpo_name": "Highly arched eyebrow"
+      },
+      {
+        "hpo_id": "HP:0001511",
+        "hpo_name": "Intrauterine growth retardation"
+      },
+      {
+        "hpo_id": "HP:0005320",
+        "hpo_name": "Lack of facial subcutaneous fat"
+      },
+      {
+        "hpo_id": "HP:0000252",
+        "hpo_name": "Microcephaly"
+      },
+      {
+        "hpo_id": "HP:0001252",
+        "hpo_name": "Muscular hypotonia"
+      },
+      {
+        "hpo_id": "HP:0000657",
+        "hpo_name": "Oculomotor apraxia"
+      },
+      {
+        "hpo_id": "HP:0000520",
+        "hpo_name": "Proptosis"
+      },
+      {
+        "hpo_id": "HP:0000495",
+        "hpo_name": "Recurrent corneal erosions"
+      },
+      {
+        "hpo_id": "HP:0001315",
+        "hpo_name": "Reduced tendon reflexes"
+      },
+      {
+        "hpo_id": "HP:0002650",
+        "hpo_name": "Scoliosis"
+      },
+      {
+        "hpo_id": "HP:0001250",
+        "hpo_name": "Seizures"
+      },
+      {
+        "hpo_id": "HP:0001773",
+        "hpo_name": "Short foot"
+      },
+      {
+        "hpo_id": "HP:0200055",
+        "hpo_name": "Small hand"
+      },
+      {
+        "hpo_id": "HP:0000486",
+        "hpo_name": "Strabismus"
+      },
+      {
+        "hpo_id": "HP:0000431",
+        "hpo_name": "Wide nasal bridge"
+      }
+    ],
+    "genes": [
+      "NGLY1"
+    ]
+  },
+  {
+    "patient_id": "P0001081",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000718",
+        "hpo_name": "Aggressive behavior"
+      },
+      {
+        "hpo_id": "HP:0010864",
+        "hpo_name": "Intellectual disability, severe"
+      },
+      {
+        "hpo_id": "HP:0000252",
+        "hpo_name": "Microcephaly"
+      },
+      {
+        "hpo_id": "HP:0001250",
+        "hpo_name": "Seizures"
+      }
+    ],
+    "genes": [
+      "WDR62"
+    ]
+  },
+  {
+    "patient_id": "P0001084",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0007965",
+        "hpo_name": "Absence of visual evoked potentials"
+      },
+      {
+        "hpo_id": "HP:0001251",
+        "hpo_name": "Ataxia"
+      },
+      {
+        "hpo_id": "HP:0008619",
+        "hpo_name": "Bilateral sensorineural hearing impairment"
+      },
+      {
+        "hpo_id": "HP:0001260",
+        "hpo_name": "Dysarthria"
+      },
+      {
+        "hpo_id": "HP:0002066",
+        "hpo_name": "Gait ataxia"
+      },
+      {
+        "hpo_id": "HP:0001254",
+        "hpo_name": "Lethargy"
+      },
+      {
+        "hpo_id": "HP:0001252",
+        "hpo_name": "Muscular hypotonia"
+      },
+      {
+        "hpo_id": "HP:0000639",
+        "hpo_name": "Nystagmus"
+      },
+      {
+        "hpo_id": "HP:0000648",
+        "hpo_name": "Optic atrophy"
+      },
+      {
+        "hpo_id": "HP:0002370",
+        "hpo_name": "Poor coordination"
+      }
+    ],
+    "genes": [
+      "ATP1A3"
+    ]
+  },
+  {
+    "patient_id": "P0001085",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0002410",
+        "hpo_name": "Aqueductal stenosis"
+      },
+      {
+        "hpo_id": "HP:0001166",
+        "hpo_name": "Arachnodactyly"
+      },
+      {
+        "hpo_id": "HP:0010665",
+        "hpo_name": "Bilateral coxa valga"
+      },
+      {
+        "hpo_id": "HP:0001363",
+        "hpo_name": "Craniosynostosis"
+      },
+      {
+        "hpo_id": "HP:0001631",
+        "hpo_name": "Defect in the atrial septum"
+      },
+      {
+        "hpo_id": "HP:0000494",
+        "hpo_name": "Downslanted palpebral fissures"
+      },
+      {
+        "hpo_id": "HP:0002474",
+        "hpo_name": "Expressive language delay"
+      },
+      {
+        "hpo_id": "HP:0000218",
+        "hpo_name": "High palate"
+      },
+      {
+        "hpo_id": "HP:0006801",
+        "hpo_name": "Hyperactive deep tendon reflexes"
+      },
+      {
+        "hpo_id": "HP:0000316",
+        "hpo_name": "Hypertelorism"
+      },
+      {
+        "hpo_id": "HP:0001265",
+        "hpo_name": "Hyporeflexia"
+      },
+      {
+        "hpo_id": "HP:0002151",
+        "hpo_name": "Increased serum lactate"
+      },
+      {
+        "hpo_id": "HP:0006889",
+        "hpo_name": "Intellectual disability, borderline"
+      },
+      {
+        "hpo_id": "HP:0001388",
+        "hpo_name": "Joint laxity"
+      },
+      {
+        "hpo_id": "HP:0000369",
+        "hpo_name": "Low-set ears"
+      },
+      {
+        "hpo_id": "HP:0000347",
+        "hpo_name": "Micrognathia"
+      },
+      {
+        "hpo_id": "HP:0002868",
+        "hpo_name": "Narrow iliac wings"
+      },
+      {
+        "hpo_id": "HP:0001655",
+        "hpo_name": "Patent foramen ovale"
+      },
+      {
+        "hpo_id": "HP:0000768",
+        "hpo_name": "Pectus carinatum"
+      },
+      {
+        "hpo_id": "HP:0001763",
+        "hpo_name": "Pes planus"
+      },
+      {
+        "hpo_id": "HP:0011220",
+        "hpo_name": "Prominent forehead"
+      },
+      {
+        "hpo_id": "HP:0000278",
+        "hpo_name": "Retrognathia"
+      },
+      {
+        "hpo_id": "HP:0000319",
+        "hpo_name": "Smooth philtrum"
+      },
+      {
+        "hpo_id": "HP:0003298",
+        "hpo_name": "Spina bifida occulta"
+      },
+      {
+        "hpo_id": "HP:0003396",
+        "hpo_name": "Syringomyelia"
+      },
+      {
+        "hpo_id": "HP:0001762",
+        "hpo_name": "Talipes equinovarus"
+      },
+      {
+        "hpo_id": "HP:0001537",
+        "hpo_name": "Umbilical hernia"
+      }
+    ],
+    "genes": [
+      "SKI"
+    ]
+  },
+  {
+    "patient_id": "P0001086",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0001344",
+        "hpo_name": "Absent speech"
+      },
+      {
+        "hpo_id": "HP:0000463",
+        "hpo_name": "Anteverted nares"
+      },
+      {
+        "hpo_id": "HP:0010055",
+        "hpo_name": "Broad hallux"
+      },
+      {
+        "hpo_id": "HP:0012448",
+        "hpo_name": "Delayed myelination"
+      },
+      {
+        "hpo_id": "HP:0006956",
+        "hpo_name": "Dilation of lateral ventricles"
+      },
+      {
+        "hpo_id": "HP:0040155",
+        "hpo_name": "Elevated urinary 3-hydroxybutyric acid"
+      },
+      {
+        "hpo_id": "HP:0045034",
+        "hpo_name": "Elevated urinary aminoisobutyric acid"
+      },
+      {
+        "hpo_id": "HP:0000286",
+        "hpo_name": "Epicanthus"
+      },
+      {
+        "hpo_id": "HP:0002007",
+        "hpo_name": "Frontal bossing"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0002281",
+        "hpo_name": "Gray matter heterotopias"
+      },
+      {
+        "hpo_id": "HP:0000348",
+        "hpo_name": "High forehead"
+      },
+      {
+        "hpo_id": "HP:0000218",
+        "hpo_name": "High palate"
+      },
+      {
+        "hpo_id": "HP:0000316",
+        "hpo_name": "Hypertelorism"
+      },
+      {
+        "hpo_id": "HP:0002079",
+        "hpo_name": "Hypoplasia of the corpus callosum"
+      },
+      {
+        "hpo_id": "HP:0007793",
+        "hpo_name": "Macular retinal pigment epithelial mottling"
+      },
+      {
+        "hpo_id": "HP:0002912",
+        "hpo_name": "Methylmalonic acidemia"
+      },
+      {
+        "hpo_id": "HP:0012120",
+        "hpo_name": "Methylmalonic aciduria"
+      },
+      {
+        "hpo_id": "HP:0001252",
+        "hpo_name": "Muscular hypotonia"
+      },
+      {
+        "hpo_id": "HP:0003196",
+        "hpo_name": "Short nose"
+      },
+      {
+        "hpo_id": "HP:0000322",
+        "hpo_name": "Short philtrum"
+      },
+      {
+        "hpo_id": "HP:0000954",
+        "hpo_name": "Single transverse palmar crease"
+      },
+      {
+        "hpo_id": "HP:0008070",
+        "hpo_name": "Sparse hair"
+      },
+      {
+        "hpo_id": "HP:0010804",
+        "hpo_name": "Tented upper lip vermilion"
+      }
+    ],
+    "genes": [
+      "ALDH6A1"
+    ]
+  },
+  {
+    "patient_id": "P0001091",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000490",
+        "hpo_name": "Deeply set eye"
+      },
+      {
+        "hpo_id": "HP:0000684",
+        "hpo_name": "Delayed eruption of teeth"
+      },
+      {
+        "hpo_id": "HP:0009125",
+        "hpo_name": "Lipodystrophy"
+      },
+      {
+        "hpo_id": "HP:0007495",
+        "hpo_name": "Prematurely aged appearance"
+      },
+      {
+        "hpo_id": "HP:0000558",
+        "hpo_name": "Rieger anomaly"
+      },
+      {
+        "hpo_id": "HP:0004322",
+        "hpo_name": "Short stature"
+      },
+      {
+        "hpo_id": "HP:0000325",
+        "hpo_name": "Triangular face"
+      },
+      {
+        "hpo_id": "HP:0000430",
+        "hpo_name": "Underdeveloped nasal alae"
+      }
+    ],
+    "genes": [
+      "PIK3R1"
+    ]
+  },
+  {
+    "patient_id": "P0001105",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000670",
+        "hpo_name": "Carious teeth"
+      },
+      {
+        "hpo_id": "HP:0000490",
+        "hpo_name": "Deeply set eye"
+      },
+      {
+        "hpo_id": "HP:0000689",
+        "hpo_name": "Dental malocclusion"
+      },
+      {
+        "hpo_id": "HP:0009890",
+        "hpo_name": "High anterior hairline"
+      },
+      {
+        "hpo_id": "HP:0000348",
+        "hpo_name": "High forehead"
+      },
+      {
+        "hpo_id": "HP:0000085",
+        "hpo_name": "Horseshoe kidney"
+      },
+      {
+        "hpo_id": "HP:0002342",
+        "hpo_name": "Intellectual disability, moderate"
+      },
+      {
+        "hpo_id": "HP:0003189",
+        "hpo_name": "Long nose"
+      },
+      {
+        "hpo_id": "HP:0009765",
+        "hpo_name": "Low hanging columella"
+      },
+      {
+        "hpo_id": "HP:0000252",
+        "hpo_name": "Microcephaly"
+      },
+      {
+        "hpo_id": "HP:0000545",
+        "hpo_name": "Myopia"
+      },
+      {
+        "hpo_id": "HP:0001643",
+        "hpo_name": "Patent ductus arteriosus"
+      },
+      {
+        "hpo_id": "HP:0012745",
+        "hpo_name": "Short palpebral fissure"
+      },
+      {
+        "hpo_id": "HP:0000179",
+        "hpo_name": "Thick lower lip vermilion"
+      },
+      {
+        "hpo_id": "HP:0000215",
+        "hpo_name": "Thick upper lip vermilion"
+      },
+      {
+        "hpo_id": "HP:0000582",
+        "hpo_name": "Upslanted palpebral fissure"
+      }
+    ],
+    "genes": [
+      "THOC6"
+    ]
+  },
+  {
+    "patient_id": "P0001106",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0000230",
+        "hpo_name": "Gingivitis"
+      },
+      {
+        "hpo_id": "HP:0012138",
+        "hpo_name": "Granulocytic hyperplasia"
+      },
+      {
+        "hpo_id": "HP:0004866",
+        "hpo_name": "Impaired ADP-induced platelet aggregation"
+      },
+      {
+        "hpo_id": "HP:0004854",
+        "hpo_name": "Intermittent thrombocytopenia"
+      },
+      {
+        "hpo_id": "HP:0001888",
+        "hpo_name": "Lymphopenia"
+      },
+      {
+        "hpo_id": "HP:0001875",
+        "hpo_name": "Neutropenia"
+      },
+      {
+        "hpo_id": "HP:0005401",
+        "hpo_name": "Recurrent candida infections"
+      },
+      {
+        "hpo_id": "HP:0000403",
+        "hpo_name": "Recurrent otitis media"
+      },
+      {
+        "hpo_id": "HP:0000010",
+        "hpo_name": "Recurrent urinary tract infections"
+      },
+      {
+        "hpo_id": "HP:0001744",
+        "hpo_name": "Splenomegaly"
+      }
+    ],
+    "genes": [
+      "G6PC3"
+    ]
+  },
+  {
+    "patient_id": "P0001107",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0011100",
+        "hpo_name": "Intestinal atresia"
+      },
+      {
+        "hpo_id": "HP:0005214",
+        "hpo_name": "Intestinal obstruction"
+      },
+      {
+        "hpo_id": "HP:0001539",
+        "hpo_name": "Omphalocele"
+      }
+    ],
+    "genes": [
+      "TTC7A"
+    ]
+  },
+  {
+    "patient_id": "P0001108",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0001662",
+        "hpo_name": "Bradycardia"
+      },
+      {
+        "hpo_id": "HP:0001508",
+        "hpo_name": "Failure to thrive"
+      },
+      {
+        "hpo_id": "HP:0005214",
+        "hpo_name": "Intestinal obstruction"
+      },
+      {
+        "hpo_id": "HP:0001649",
+        "hpo_name": "Tachycardia"
+      }
+    ],
+    "genes": [
+      "SGOL1"
+    ]
+  },
+  {
+    "patient_id": "P0001135",
+    "hpo_terms": [
+      {
+        "hpo_id": "HP:0006958",
+        "hpo_name": "Abnormal auditory evoked potentials"
+      },
+      {
+        "hpo_id": "HP:0100022",
+        "hpo_name": "Abnormality of movement"
+      },
+      {
+        "hpo_id": "HP:0000522",
+        "hpo_name": "Alacrima"
+      },
+      {
+        "hpo_id": "HP:0002059",
+        "hpo_name": "Cerebral atrophy"
+      },
+      {
+        "hpo_id": "HP:0010605",
+        "hpo_name": "Chalazion"
+      },
+      {
+        "hpo_id": "HP:0002019",
+        "hpo_name": "Constipation"
+      },
+      {
+        "hpo_id": "HP:0002353",
+        "hpo_name": "EEG abnormality"
+      },
+      {
+        "hpo_id": "HP:0002910",
+        "hpo_name": "Elevated hepatic transaminases"
+      },
+      {
+        "hpo_id": "HP:0001263",
+        "hpo_name": "Global developmental delay"
+      },
+      {
+        "hpo_id": "HP:0001395",
+        "hpo_name": "Hepatic fibrosis"
+      },
+      {
+        "hpo_id": "HP:0002079",
+        "hpo_name": "Hypoplasia of the corpus callosum"
+      },
+      {
+        "hpo_id": "HP:0030303",
+        "hpo_name": "Hypoplastic anterior commissure"
+      },
+      {
+        "hpo_id": "HP:0002151",
+        "hpo_name": "Increased serum lactate"
+      },
+      {
+        "hpo_id": "HP:0000252",
+        "hpo_name": "Microcephaly"
+      },
+      {
+        "hpo_id": "HP:0001252",
+        "hpo_name": "Muscular hypotonia"
+      },
+      {
+        "hpo_id": "HP:0000657",
+        "hpo_name": "Oculomotor apraxia"
+      },
+      {
+        "hpo_id": "HP:0006579",
+        "hpo_name": "Prolonged neonatal jaundice"
+      },
+      {
+        "hpo_id": "HP:0001773",
+        "hpo_name": "Short foot"
+      },
+      {
+        "hpo_id": "HP:0002472",
+        "hpo_name": "Small cerebral cortex"
+      },
+      {
+        "hpo_id": "HP:0200055",
+        "hpo_name": "Small hand"
+      },
+      {
+        "hpo_id": "HP:0000486",
+        "hpo_name": "Strabismus"
+      }
+    ],
+    "genes": [
+      "NGLY1"
+    ]
+  }
+]
