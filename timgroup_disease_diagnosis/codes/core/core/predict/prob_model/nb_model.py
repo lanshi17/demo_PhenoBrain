@@ -152,9 +152,8 @@ class HPOProbMNBModel(Model):
 			M = np.zeros(shape=[self.HPO_NUM, ], dtype=np.float64)
 			for hpo_rank, disRankList in hpo_int_2_dis_int.items():
 				M[hpo_rank] = len(disRankList)
-			M = np.log(M / self.DIS_NUM)
-			M[np.isneginf(M)] = np.log(1 / self.DIS_NUM)  #
-			return M
+			M[M == 0] = 1
+			return np.log(M / self.DIS_NUM)
 		return np.ones(shape=(self.HPO_NUM,), dtype=np.float64) * np.log(self.p2)
 
 

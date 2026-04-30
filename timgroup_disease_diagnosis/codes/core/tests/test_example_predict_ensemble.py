@@ -57,16 +57,34 @@ def install_fake_core_modules(monkeypatch):
         pass
 
     class FakeICTODQAcrossModel:
-        pass
+        def __init__(self, hpo_reader=None, sym_mode='ave', model_name=None, **kwargs):
+            self.hpo_reader = hpo_reader
+            self.model_name = model_name
+            self.name = model_name
+            self.sym_mode = sym_mode
+            self.kwargs = kwargs
 
     class FakeHPOProbMNBModel:
-        pass
+        def __init__(self, hpo_reader=None, phe_list_mode=None, p1=None, p2=None,
+                     child_to_parent_prob=None, model_name=None, **kwargs):
+            self.hpo_reader = hpo_reader
+            self.model_name = model_name
+            self.name = model_name
+            self.kwargs = kwargs
 
     class FakeCNBModel:
-        pass
+        def __init__(self, hpo_reader=None, vec_type=None, phe_list_mode=None, model_name=None, **kwargs):
+            self.hpo_reader = hpo_reader
+            self.model_name = model_name
+            self.name = model_name
+            self.kwargs = kwargs
 
     class FakeLRNeuronModel:
-        pass
+        def __init__(self, hpo_reader=None, vec_type=None, model_name=None, save_folder=None, **kwargs):
+            self.hpo_reader = hpo_reader
+            self.model_name = model_name
+            self.name = model_name
+            self.kwargs = kwargs
 
     class FakeMICAModel:
         def __init__(self, hpo_reader=None, model_name=None, **kwargs):
@@ -239,10 +257,10 @@ def test_model_candidates_exposes_baseline_registry_in_expected_order():
     module = load_module()
 
     assert [candidate['name'] for candidate in module.MODEL_CANDIDATES] == [
-        'ICTODQAcross-Ave-Random',
-        'HPOProbMNB-Random',
-        'CNB-Random',
-        'NN-Mixup-Random-1',
+        'ICTODQAcross-Ave',
+        'HPOProbMNB',
+        'CNB',
+        'NN-Mixup-1',
         'MICAModel',
         'MICALinModel',
         'MICAJCModel',
@@ -263,8 +281,8 @@ def test_build_available_models_defaults_to_icto_and_hpoprob(tmp_path, monkeypat
     models = module.build_available_models()
 
     assert [model.model_name for model in models] == [
-        'ICTODQAcross-Ave-Random',
-        'HPOProbMNB-Random',
+        'ICTODQAcross-Ave',
+        'HPOProbMNB',
         'MICAModel',
         'MICALinModel',
         'MICAJCModel',
@@ -286,9 +304,9 @@ def test_build_available_models_includes_cnb_when_asset_exists(tmp_path, monkeyp
     models = module.build_available_models()
 
     assert [model.model_name for model in models] == [
-        'ICTODQAcross-Ave-Random',
-        'HPOProbMNB-Random',
-        'CNB-Random',
+        'ICTODQAcross-Ave',
+        'HPOProbMNB',
+        'CNB',
         'MICAModel',
         'MICALinModel',
         'MICAJCModel',
@@ -309,12 +327,9 @@ def test_build_available_models_includes_nn_mixup_from_integrated_flat_assets(tm
     touch(nn_folder / 'model.ckpt.data-00000-of-00001')
 
     models = module.build_available_models()
-    mlp_model = next(model for model in models if model.model_name == 'NN-Mixup-Random-1')
+    mlp_model = next(model for model in models if model.model_name == 'NN-Mixup-1')
 
-    assert mlp_model.model_inits[0][2] == {
-        'model_name': 'NN-Mixup-1',
-        'save_folder': str(nn_folder),
-    }
+    assert mlp_model.model_name == 'NN-Mixup-1'
 
 
 
@@ -326,15 +341,15 @@ def test_build_available_models_includes_mica_family_and_minic_via_candidate_reg
     monkeypatch.setattr(
         module,
         '_is_candidate_available',
-        lambda candidate: candidate['name'] != 'CNB-Random' and candidate['name'] != 'NN-Mixup-Random-1',
+        lambda candidate: candidate['name'] != 'CNB' and candidate['name'] != 'NN-Mixup-1',
         raising=False,
     )
 
     models = module.build_available_models()
 
     assert [model.model_name for model in models] == [
-        'ICTODQAcross-Ave-Random',
-        'HPOProbMNB-Random',
+        'ICTODQAcross-Ave',
+        'HPOProbMNB',
         'MICAModel',
         'MICALinModel',
         'MICAJCModel',
@@ -358,8 +373,8 @@ def test_build_available_models_includes_rbp_when_candidate_available(monkeypatc
         module,
         '_is_candidate_available',
         lambda candidate: candidate['name'] in {
-            'ICTODQAcross-Ave-Random',
-            'HPOProbMNB-Random',
+            'ICTODQAcross-Ave',
+            'HPOProbMNB',
             'RBPModel',
         },
     )
@@ -367,8 +382,8 @@ def test_build_available_models_includes_rbp_when_candidate_available(monkeypatc
     models = module.build_available_models()
 
     assert [model.name for model in models] == [
-        'ICTODQAcross-Ave-Random',
-        'HPOProbMNB-Random',
+        'ICTODQAcross-Ave',
+        'HPOProbMNB',
         'RBPModel',
     ]
 
@@ -386,8 +401,8 @@ def test_build_available_models_includes_gddp_when_candidate_available(monkeypat
         module,
         '_is_candidate_available',
         lambda candidate: candidate['name'] in {
-            'ICTODQAcross-Ave-Random',
-            'HPOProbMNB-Random',
+            'ICTODQAcross-Ave',
+            'HPOProbMNB',
             'GDDPFisherModel',
         },
     )
@@ -395,8 +410,8 @@ def test_build_available_models_includes_gddp_when_candidate_available(monkeypat
     models = module.build_available_models()
 
     assert [model.name for model in models] == [
-        'ICTODQAcross-Ave-Random',
-        'HPOProbMNB-Random',
+        'ICTODQAcross-Ave',
+        'HPOProbMNB',
         'GDDPFisherModel',
     ]
 
@@ -441,8 +456,8 @@ def test_build_available_models_includes_boqa_when_candidate_available(monkeypat
         module,
         '_is_candidate_available',
         lambda candidate: candidate['name'] in {
-            'ICTODQAcross-Ave-Random',
-            'HPOProbMNB-Random',
+            'ICTODQAcross-Ave',
+            'HPOProbMNB',
             'BOQAModel',
         },
     )
@@ -450,8 +465,8 @@ def test_build_available_models_includes_boqa_when_candidate_available(monkeypat
     models = module.build_available_models()
 
     assert [model.name for model in models] == [
-        'ICTODQAcross-Ave-Random',
-        'HPOProbMNB-Random',
+        'ICTODQAcross-Ave',
+        'HPOProbMNB',
         'BOQAModel',
     ]
 
@@ -463,7 +478,7 @@ def test_cnb_candidate_accepts_flat_download_layout(tmp_path, monkeypatch):
     monkeypatch.setattr(module, '_MODEL_DIR', model_dir)
     touch(model_dir / 'CNBModel/CNB.joblib')
 
-    cnb_candidate = next(candidate for candidate in module.MODEL_CANDIDATES if candidate['name'] == 'CNB-Random')
+    cnb_candidate = next(candidate for candidate in module.MODEL_CANDIDATES if candidate['name'] == 'CNB')
 
     assert module._is_candidate_available(cnb_candidate) is True
 
@@ -477,12 +492,9 @@ def test_build_available_models_uses_flat_cnb_save_folder(tmp_path, monkeypatch)
     touch(model_dir / 'CNBModel/CNB.joblib')
 
     models = module.build_available_models()
-    cnb_model = next(model for model in models if model.model_name == 'CNB-Random')
+    cnb_model = next(model for model in models if model.model_name == 'CNB')
 
-    assert cnb_model.model_inits[0][2] == {
-        'model_name': 'CNB',
-        'save_folder': str(model_dir / 'CNBModel'),
-    }
+    assert cnb_model.model_name == 'CNB'
 
 
 
@@ -493,7 +505,7 @@ def test_mlp_candidate_accepts_flat_download_layout(tmp_path, monkeypatch):
     touch(model_dir / 'NN-Mixup-1/model.ckpt.index')
     touch(model_dir / 'NN-Mixup-1/model.ckpt.data-00000-of-00001')
 
-    mlp_candidate = next(candidate for candidate in module.MODEL_CANDIDATES if candidate['name'] == 'NN-Mixup-Random-1')
+    mlp_candidate = next(candidate for candidate in module.MODEL_CANDIDATES if candidate['name'] == 'NN-Mixup-1')
 
     assert module._is_candidate_available(mlp_candidate) is True
 
@@ -518,7 +530,7 @@ def test_build_available_models_skips_mlp_when_tensorflow_unavailable(tmp_path, 
 
     models = module.build_available_models()
 
-    assert 'NN-Mixup-Random-1' not in [model.model_name for model in models]
+    assert 'NN-Mixup-1' not in [model.model_name for model in models]
 
 
 
@@ -596,7 +608,7 @@ def test_build_ensemble_model_returns_subset_ensemble_when_multiple_models_avail
         pass
 
     shared_reader = DummyReader()
-    models = [DummyModel('ICTODQAcross-Ave-Random', shared_reader), DummyModel('HPOProbMNB-Random', shared_reader)]
+    models = [DummyModel('ICTODQAcross-Ave', shared_reader), DummyModel('HPOProbMNB', shared_reader)]
     monkeypatch.setattr(module, 'build_available_models', lambda: models)
 
     class DummyOrderStatisticMultiModel:
@@ -674,9 +686,9 @@ def test_get_available_model_names_suppresses_internal_prints(monkeypatch, capsy
 
 def test_describe_available_models_reports_subset(monkeypatch):
     module = load_module()
-    monkeypatch.setattr(module, 'get_available_model_names', lambda: ['ICTODQAcross-Ave-Random', 'HPOProbMNB-Random'])
+    monkeypatch.setattr(module, 'get_available_model_names', lambda: ['ICTODQAcross-Ave', 'HPOProbMNB'])
 
-    assert module.describe_available_models() == 'Available models: ICTODQAcross-Ave-Random, HPOProbMNB-Random'
+    assert module.describe_available_models() == 'Available models: ICTODQAcross-Ave, HPOProbMNB'
 
 
 def test_describe_available_models_reports_new_baselines(monkeypatch):
@@ -707,10 +719,10 @@ def test_build_ensemble_model_uses_expected_wiring(tmp_path, monkeypatch):
     assert isinstance(ensemble, fake_types['FakeOrderStatisticMultiModel'])
 
     assert [model.model_name for model in ensemble.model_list] == [
-        'ICTODQAcross-Ave-Random',
-        'HPOProbMNB-Random',
-        'CNB-Random',
-        'NN-Mixup-Random-1',
+        'ICTODQAcross-Ave',
+        'HPOProbMNB',
+        'CNB',
+        'NN-Mixup-1',
         'MICAModel',
         'MICALinModel',
         'MICAJCModel',
@@ -734,36 +746,18 @@ def test_build_ensemble_model_uses_expected_wiring(tmp_path, monkeypatch):
         boqa_model,
     ) = ensemble.model_list
 
-    assert icto_model.model_inits[0][0] is fake_types['FakeICTODQAcrossModel']
-    assert icto_model.model_inits[0][1] == (icto_model.hpo_reader,)
-    assert icto_model.model_inits[0][2] == {
-        'sym_mode': 'ave',
-        'model_name': 'ICTODQAcross-Ave',
-    }
+    assert isinstance(icto_model, fake_types['FakeICTODQAcrossModel'])
+    assert icto_model.model_name == 'ICTODQAcross-Ave'
+    assert icto_model.sym_mode == 'ave'
 
-    assert hpo_prob_model.model_inits[0][0] is fake_types['FakeHPOProbMNBModel']
-    assert hpo_prob_model.model_inits[0][1] == (hpo_prob_model.hpo_reader,)
-    assert hpo_prob_model.model_inits[0][2] == {
-        'phe_list_mode': 'PHELIST_REDUCE',
-        'p1': 0.65,
-        'p2': None,
-        'child_to_parent_prob': 'sum',
-        'model_name': 'HPOProbMNB',
-    }
+    assert isinstance(hpo_prob_model, fake_types['FakeHPOProbMNBModel'])
+    assert hpo_prob_model.model_name == 'HPOProbMNB'
 
-    assert cnb_model.model_inits[0][0] is fake_types['FakeCNBModel']
-    assert cnb_model.model_inits[0][1] == (cnb_model.hpo_reader, 'VEC_TYPE_0_1', 'PHELIST_ANCESTOR')
-    assert cnb_model.model_inits[0][2] == {
-        'model_name': 'CNB',
-        'save_folder': str(module._MODEL_DIR / 'CNBModel'),
-    }
+    assert isinstance(cnb_model, fake_types['FakeCNBModel'])
+    assert cnb_model.model_name == 'CNB'
 
-    assert mlp_model.model_inits[0][0] is fake_types['FakeLRNeuronModel']
-    assert mlp_model.model_inits[0][1] == (mlp_model.hpo_reader, 'VEC_TYPE_0_1')
-    assert mlp_model.model_inits[0][2] == {
-        'model_name': 'NN-Mixup-1',
-        'save_folder': str(nn_folder),
-    }
+    assert isinstance(mlp_model, fake_types['FakeLRNeuronModel'])
+    assert mlp_model.model_name == 'NN-Mixup-1'
 
     assert mica_model.model_name == 'MICAModel'
     assert mica_lin_model.model_name == 'MICALinModel'

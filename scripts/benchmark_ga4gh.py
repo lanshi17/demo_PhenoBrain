@@ -17,10 +17,10 @@ SUMMARY_PATH = PROJECT_ROOT / 'results' / 'ga4gh_benchmark_summary.json'
 TOP_K_LIST = (1, 3, 5, 10, 30)
 BENCHMARK_CPU_USE = 1
 MME_COMPONENT_MODEL_NAMES = (
-    'ICTODQAcross-Ave-Random',
-    'HPOProbMNB-Random',
-    'CNB-Random',
-    'NN-Mixup-Random-1',
+    'ICTODQAcross-Ave',
+    'HPOProbMNB',
+    'CNB',
+    'NN-Mixup-1',
 )
 
 

@@ -36,10 +36,10 @@ def test_select_mme_component_models_filters_extra_models_in_expected_order():
     module = load_module()
     available = [
         DummyComponent('MICAModel'),
-        DummyComponent('CNB-Random'),
-        DummyComponent('ICTODQAcross-Ave-Random'),
-        DummyComponent('NN-Mixup-Random-1'),
-        DummyComponent('HPOProbMNB-Random'),
+        DummyComponent('CNB'),
+        DummyComponent('ICTODQAcross-Ave'),
+        DummyComponent('NN-Mixup-1'),
+        DummyComponent('HPOProbMNB'),
     ]
 
     selected = module.select_mme_component_models(available)
@@ -50,12 +50,12 @@ def test_select_mme_component_models_filters_extra_models_in_expected_order():
 def test_select_mme_component_models_reports_missing_models():
     module = load_module()
     available = [
-        DummyComponent('ICTODQAcross-Ave-Random'),
-        DummyComponent('HPOProbMNB-Random'),
-        DummyComponent('CNB-Random'),
+        DummyComponent('ICTODQAcross-Ave'),
+        DummyComponent('HPOProbMNB'),
+        DummyComponent('CNB'),
     ]
 
-    with pytest.raises(RuntimeError, match='NN-Mixup-Random-1'):
+    with pytest.raises(RuntimeError, match='NN-Mixup-1'):
         module.select_mme_component_models(available)
 
 
@@ -94,7 +94,7 @@ def test_run_benchmark_uses_single_process_for_tensorflow_ensemble(monkeypatch, 
         def get_dataset_size(self, data_name):
             return 2
 
-    monkeypatch.setattr(module, 'build_benchmark_model', lambda: (DummyModel(), [DummyComponent('ICTODQAcross-Ave-Random')]))
+    monkeypatch.setattr(module, 'build_benchmark_model', lambda: (DummyModel(), [DummyComponent('ICTODQAcross-Ave')]))
     monkeypatch.setattr(module, 'build_testor', lambda: DummyTestor())
     monkeypatch.setattr(module, 'write_summary', lambda summary: tmp_path / 'summary.json')
 
@@ -119,7 +119,7 @@ def test_build_summary_rounds_top_k_counts():
 
     summary = module.build_summary(
         model=DummyModel(),
-        component_models=[DummyComponent('ICTODQAcross-Ave-Random'), DummyComponent('HPOProbMNB-Random')],
+        component_models=[DummyComponent('ICTODQAcross-Ave'), DummyComponent('HPOProbMNB')],
         dataset_size=43,
         metrics=metrics,
     )
@@ -127,6 +127,6 @@ def test_build_summary_rounds_top_k_counts():
     assert summary['model'] == 'Ensemble'
     assert summary['dataset'] == 'GA4GH'
     assert summary['num_patients'] == 43
-    assert summary['component_models'] == ['ICTODQAcross-Ave-Random', 'HPOProbMNB-Random']
+    assert summary['component_models'] == ['ICTODQAcross-Ave', 'HPOProbMNB']
     assert summary['top_k_summary']['top3'] == {'count': 31, 'total': 43, 'recall': 0.7209}
     assert summary['metrics'] == metrics

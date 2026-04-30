@@ -87,10 +87,10 @@ def test_select_single_models_reports_missing_name():
 def test_build_ensemble_models_uses_named_preset_components(monkeypatch):
     module = load_module()
     available = [
-        DummyModel('HPOProbMNB-Random'),
-        DummyModel('ICTODQAcross-Ave-Random'),
-        DummyModel('CNB-Random'),
-        DummyModel('NN-Mixup-Random-1'),
+        DummyModel('HPOProbMNB'),
+        DummyModel('ICTODQAcross-Ave'),
+        DummyModel('CNB'),
+        DummyModel('NN-Mixup-1'),
     ]
     captured = {}
 
@@ -128,6 +128,26 @@ def test_load_benchmark_dataset_converts_questions_and_answers(tmp_path):
     dataset = module.load_benchmark_dataset({'questions': questions_path, 'answers': answers_path})
 
     assert dataset == [[['HP:1', 'HP:2'], ['OMIM:123']]]
+
+
+def test_load_benchmark_dataset_remaps_obsolete_hpo_ids(tmp_path):
+    module = load_module()
+    questions_path = tmp_path / 'questions.json'
+    answers_path = tmp_path / 'answers.json'
+    write_json(questions_path, [
+        {'patient_id': 'p1', 'hpo_terms': [{'hpo_id': 'HP:old'}, {'hpo_id': 'HP:current'}]},
+    ])
+    write_json(answers_path, [
+        {'patient_id': 'p1', 'answers': [{'omim_id': 'MIM:123'}]},
+    ])
+
+    dataset = module.load_benchmark_dataset(
+        {'questions': questions_path, 'answers': answers_path},
+        hpo_dict={'HP:current': {}},
+        old_to_new_hpo={'HP:old': 'HP:current'},
+    )
+
+    assert dataset == [[['HP:current', 'HP:current'], ['OMIM:123']]]
 
 
 def test_resolve_dataset_specs_uses_requested_order():
@@ -231,7 +251,7 @@ def test_get_available_model_names_collects_delayed_model_teardown_noise(monkeyp
     module = load_module()
 
     class NoisyCyclicModel:
-        name = 'NN-Mixup-Random-1'
+        name = 'NN-Mixup-1'
 
         def __init__(self):
             self.cycle = self
@@ -244,5 +264,5 @@ def test_get_available_model_names_collects_delayed_model_teardown_noise(monkeyp
     names = module.run_quietly(module.get_available_model_names)
     gc.collect()
 
-    assert names == ['NN-Mixup-Random-1']
+    assert names == ['NN-Mixup-1']
     assert '__del__ starts running...' not in capsys.readouterr().out

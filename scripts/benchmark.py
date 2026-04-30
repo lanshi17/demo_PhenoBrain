@@ -21,10 +21,10 @@ SUPPORTED_METRICS = DEFAULT_METRICS
 DEFAULT_ENSEMBLES = ('HPOP-ICT-CNB-NN',)
 ENSEMBLE_PRESETS = {
     'HPOP-ICT-CNB-NN': (
-        'HPOProbMNB-Random',
-        'ICTODQAcross-Ave-Random',
-        'CNB-Random',
-        'NN-Mixup-Random-1',
+        'HPOProbMNB',
+        'ICTODQAcross-Ave',
+        'CNB',
+        'NN-Mixup-1',
     ),
 }
 DATASET_SPECS = {
@@ -150,7 +150,20 @@ def normalize_omim_id(omim_id):
     return omim_id
 
 
-def load_benchmark_dataset(spec):
+def normalize_hpo_list(hpo_list, hpo_dict=None, old_to_new_hpo=None):
+    if hpo_dict is None:
+        return hpo_list
+    old_to_new_hpo = old_to_new_hpo or {}
+    normalized = []
+    for hpo_id in hpo_list:
+        if hpo_id in hpo_dict:
+            normalized.append(hpo_id)
+        elif hpo_id in old_to_new_hpo:
+            normalized.append(old_to_new_hpo[hpo_id])
+    return normalized
+
+
+def load_benchmark_dataset(spec, hpo_dict=None, old_to_new_hpo=None):
     questions = {item['patient_id']: item for item in load_json(spec['questions'])}
     answers = {item['patient_id']: item for item in load_json(spec['answers'])}
     dataset = []
@@ -158,7 +171,7 @@ def load_benchmark_dataset(spec):
         answer = answers.get(patient_id)
         if answer is None or not answer['answers']:
             continue
-        hpo_list = [hpo['hpo_id'] for hpo in question['hpo_terms']]
+        hpo_list = normalize_hpo_list([hpo['hpo_id'] for hpo in question['hpo_terms']], hpo_dict, old_to_new_hpo)
         disease_list = [normalize_omim_id(item['omim_id']) for item in answer['answers']]
         dataset.append([hpo_list, disease_list])
     return dataset
@@ -186,7 +199,11 @@ def build_testor(dataset_name, dataset_spec):
     hpo_reader = HPOIntegratedDatasetReader(keep_dnames=['OMIM', 'ORPHA', 'CCRD'], rm_no_use_hpo=False)
     testor = ModelTestor(eval_data=CUSTOM_DATA, hpo_reader=hpo_reader)
     testor.data_names = [dataset_name]
-    dataset = load_benchmark_dataset(dataset_spec)
+    dataset = load_benchmark_dataset(
+        dataset_spec,
+        hpo_dict=hpo_reader.get_hpo_dict(),
+        old_to_new_hpo=hpo_reader.get_old_map_new_hpo_dict(),
+    )
     testor.data[dataset_name] = convert_dataset_answers_to_rd_codes(
         dataset,
         testor.get_rd_reader(),

@@ -31,10 +31,10 @@ _REQUIRED_ASSETS = (
 )
 
 MODEL_CANDIDATES = [
-    {'name': 'ICTODQAcross-Ave-Random', 'kind': 'baseline'},
-    {'name': 'HPOProbMNB-Random', 'kind': 'baseline'},
+    {'name': 'ICTODQAcross-Ave', 'kind': 'baseline'},
+    {'name': 'HPOProbMNB', 'kind': 'baseline'},
     {
-        'name': 'CNB-Random',
+        'name': 'CNB',
         'kind': 'optional',
         'required_asset_groups': [[
             Path('INTEGRATE_CCRD_OMIM_ORPHA/CNBModel/CNB.joblib'),
@@ -43,7 +43,7 @@ MODEL_CANDIDATES = [
         ]],
     },
     {
-        'name': 'NN-Mixup-Random-1',
+        'name': 'NN-Mixup-1',
         'kind': 'optional',
         'required_asset_groups': [[
             Path('INTEGRATE_CCRD_OMIM_ORPHA/NN-Mixup-1/model.ckpt.index'),
@@ -163,7 +163,6 @@ def _check_required_assets() -> None:
 
 
 def build_available_models():
-    from core.predict.ensemble import OrderedMultiModel, RandomModel
     from core.predict.prob_model import CNBModel, HPOProbMNBModel
     from core.predict.prob_model import BOQAModel
     from core.predict.sim_model import (
@@ -206,13 +205,10 @@ def build_available_models():
     def build_mlp_model():
         from core.predict.ml_model import LRNeuronModel
 
-        return OrderedMultiModel(
-            model_inits=[
-                (LRNeuronModel, (hpo_reader_rm_unused, VEC_TYPE_0_1), get_mlp_kwargs()),
-                (RandomModel, (hpo_reader_rm_unused,), {'seed': 777}),
-            ],
-            hpo_reader=hpo_reader_rm_unused,
-            model_name='NN-Mixup-Random-1',
+        return LRNeuronModel(
+            hpo_reader_rm_unused,
+            vec_type=VEC_TYPE_0_1,
+            **get_mlp_kwargs(),
         )
 
     def get_cnb_kwargs():
@@ -227,40 +223,26 @@ def build_available_models():
         }
 
     builders = {
-        'ICTODQAcross-Ave-Random': lambda: OrderedMultiModel(
-            model_inits=[
-                (ICTODQAcrossModel, (hpo_reader_with_all_hpo,), {
-                    'sym_mode': 'ave',
-                    'model_name': 'ICTODQAcross-Ave',
-                }),
-                (RandomModel, (hpo_reader_with_all_hpo,), {'seed': 777}),
-            ],
+        'ICTODQAcross-Ave': lambda: ICTODQAcrossModel(
             hpo_reader=hpo_reader_with_all_hpo,
-            model_name='ICTODQAcross-Ave-Random',
+            sym_mode='ave',
+            model_name='ICTODQAcross-Ave',
         ),
-        'HPOProbMNB-Random': lambda: OrderedMultiModel(
-            model_inits=[
-                (HPOProbMNBModel, (hpo_reader_with_all_hpo,), {
-                    'phe_list_mode': PHELIST_REDUCE,
-                    'p1': 0.65,
-                    'p2': None,
-                    'child_to_parent_prob': 'sum',
-                    'model_name': 'HPOProbMNB',
-                }),
-                (RandomModel, (hpo_reader_with_all_hpo,), {'seed': 777}),
-            ],
+        'HPOProbMNB': lambda: HPOProbMNBModel(
             hpo_reader=hpo_reader_with_all_hpo,
-            model_name='HPOProbMNB-Random',
+            phe_list_mode=PHELIST_REDUCE,
+            p1=0.65,
+            p2=None,
+            child_to_parent_prob='sum',
+            model_name='HPOProbMNB',
         ),
-        'CNB-Random': lambda: OrderedMultiModel(
-            model_inits=[
-                (CNBModel, (hpo_reader_with_all_hpo, VEC_TYPE_0_1, PHELIST_ANCESTOR), get_cnb_kwargs()),
-                (RandomModel, (hpo_reader_with_all_hpo,), {'seed': 777}),
-            ],
+        'CNB': lambda: CNBModel(
             hpo_reader=hpo_reader_with_all_hpo,
-            model_name='CNB-Random',
+            vec_type=VEC_TYPE_0_1,
+            phe_list_mode=PHELIST_ANCESTOR,
+            **get_cnb_kwargs(),
         ),
-        'NN-Mixup-Random-1': build_mlp_model,
+        'NN-Mixup-1': build_mlp_model,
         'MICAModel': lambda: MICAModel(
             hpo_reader=hpo_reader_with_all_hpo,
             model_name='MICAModel',
@@ -298,7 +280,7 @@ def build_available_models():
         try:
             model_list.append(builders[candidate['name']]())
         except ModuleNotFoundError:
-            if candidate['name'] == 'NN-Mixup-Random-1':
+            if candidate['name'] == 'NN-Mixup-1':
                 continue
             raise
     return model_list
