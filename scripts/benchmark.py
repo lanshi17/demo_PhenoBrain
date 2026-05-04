@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import gc
 import io
 import json
@@ -14,7 +15,8 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CORE_DIR = PROJECT_ROOT / 'timgroup_disease_diagnosis' / 'codes' / 'core'
 SCRIPT_DIR = CORE_DIR / 'core' / 'script'
-SUMMARY_PATH = PROJECT_ROOT / 'results' / 'benchmark_summary.json'
+SUMMARY_DIR = PROJECT_ROOT / 'results'
+SUPPORTED_FORMATS = ('csv', 'json')
 DEFAULT_DATASETS = ('MME', 'GA4GH')
 DEFAULT_METRICS = ('top1', 'top3', 'top5', 'top10', 'top30')
 SUPPORTED_METRICS = DEFAULT_METRICS
@@ -65,6 +67,7 @@ def parse_args(argv=None):
     parser.add_argument('--dataset', dest='datasets', type=parse_csv, default=list(DEFAULT_DATASETS))
     parser.add_argument('--metrics', type=parse_csv, default=list(DEFAULT_METRICS))
     parser.add_argument('--gpu', type=str, default=None, help='GPU device id (e.g. "0", "0,1"). Omit to use CPU.')
+    parser.add_argument('--format', choices=SUPPORTED_FORMATS, default='csv', help='Output format (default: csv)')
     parser.add_argument('--list-models', action='store_true')
     args = parser.parse_args(argv)
     for metric in args.metrics:
@@ -247,14 +250,40 @@ def print_result_summary(summary):
         print(f"{metric_name}: {item['count']}/{item['total']} ({item['recall']:.4f})")
 
 
-def write_summary(summary, summary_path=SUMMARY_PATH):
-    summary_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(summary_path, 'w', encoding='utf-8') as handle:
-        json.dump(summary, handle, indent=2)
-    return summary_path
+def write_summary(summary, output_format='csv', summary_dir=SUMMARY_DIR):
+    summary_dir.mkdir(parents=True, exist_ok=True)
+    if output_format == 'json':
+        path = summary_dir / 'benchmark_summary.json'
+        with open(path, 'w', encoding='utf-8') as handle:
+            json.dump(summary, handle, indent=2)
+    else:
+        path = summary_dir / 'benchmark_summary.csv'
+        _write_csv_summary(summary, path)
+    return path
 
 
-def run_benchmark(requested_models, requested_ensembles, requested_datasets, requested_metrics):
+def _write_csv_summary(summary, path):
+    requested_metrics = summary['metrics']
+    with open(path, 'w', newline='', encoding='utf-8') as handle:
+        writer = csv.writer(handle)
+        writer.writerow(
+            ['model', 'dataset', 'num_patients']
+            + [f'{m}_count' for m in requested_metrics]
+            + [f'{m}_recall' for m in requested_metrics]
+        )
+        for run in summary['runs']:
+            row = [run['model'], run['dataset'], run['num_patients']]
+            for m in requested_metrics:
+                s = run['top_k_summary'].get(m, {})
+                row.append(s.get('count', ''))
+            for m in requested_metrics:
+                s = run['top_k_summary'].get(m, {})
+                recall = s.get('recall')
+                row.append(f'{recall:.4f}' if recall is not None else '')
+            writer.writerow(row)
+
+
+def run_benchmark(requested_models, requested_ensembles, requested_datasets, requested_metrics, output_format='csv'):
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     logger = logging.getLogger()
     available_models = build_available_models()
@@ -292,7 +321,7 @@ def run_benchmark(requested_models, requested_ensembles, requested_datasets, req
         'models': [model.name for model in models],
         'runs': runs,
     }
-    write_summary(summary)
+    write_summary(summary, output_format)
     return summary
 
 
@@ -312,7 +341,7 @@ def main(argv=None):
     if args.list_models:
         print_models()
         return None
-    return run_benchmark(args.models, args.ensembles, args.datasets, args.metrics)
+    return run_benchmark(args.models, args.ensembles, args.datasets, args.metrics, args.format)
 
 
 if __name__ == '__main__':

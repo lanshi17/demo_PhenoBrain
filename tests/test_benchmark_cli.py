@@ -25,6 +25,7 @@ def test_parse_args_defaults_to_all_datasets_all_metrics_and_default_ensemble():
     assert args.datasets == ['MME', 'GA4GH']
     assert args.metrics == ['top1', 'top3', 'top5', 'top10', 'top30']
     assert args.gpu is None
+    assert args.format == 'csv'
 
 
 def test_configure_gpu_sets_cuda_visible_devices(monkeypatch):
@@ -225,7 +226,7 @@ def test_run_benchmark_runs_each_model_dataset_pair(monkeypatch, tmp_path):
     monkeypatch.setattr(module, 'build_available_models', lambda: [DummyModel('A'), DummyModel('B')])
     monkeypatch.setattr(module, 'build_ensemble_models', lambda available, names: [DummyModel('HPOP-ICT-CNB-NN')])
     monkeypatch.setattr(module, 'build_testor', lambda dataset_name, spec: DummyTestor(dataset_name))
-    monkeypatch.setattr(module, 'write_summary', lambda summary, summary_path=module.SUMMARY_PATH: tmp_path / 'summary.json')
+    monkeypatch.setattr(module, 'write_summary', lambda summary, output_format='csv', summary_dir=module.SUMMARY_DIR: tmp_path / 'summary.csv')
 
     summary = module.run_benchmark(
         requested_models=['A'],
@@ -242,11 +243,56 @@ def test_run_benchmark_runs_each_model_dataset_pair(monkeypatch, tmp_path):
 
 def test_write_summary_creates_json(tmp_path):
     module = load_module()
-    path = tmp_path / 'summary.json'
-    value = {'runs': []}
+    value = {'datasets': ['MME'], 'metrics': ['top1'], 'models': ['A'], 'runs': []}
 
-    assert module.write_summary(value, path) == path
+    path = module.write_summary(value, 'json', tmp_path)
+
+    assert path == tmp_path / 'benchmark_summary.json'
     assert json.loads(path.read_text(encoding='utf-8')) == value
+
+
+def test_write_summary_creates_csv_by_default(tmp_path):
+    module = load_module()
+    value = {
+        'datasets': ['MME'],
+        'metrics': ['top1'],
+        'models': ['A'],
+        'runs': [{
+            'model': 'A', 'dataset': 'MME', 'num_patients': 2,
+            'metrics': {'Mic.Recall.1': 0.5},
+            'top_k_summary': {'top1': {'count': 1, 'total': 2, 'recall': 0.5}},
+        }],
+    }
+
+    path = module.write_summary(value, 'csv', tmp_path)
+
+    assert path == tmp_path / 'benchmark_summary.csv'
+    lines = path.read_text(encoding='utf-8').strip().splitlines()
+    assert lines[0] == 'model,dataset,num_patients,top1_count,top1_recall'
+    assert lines[1] == 'A,MME,2,1,0.5000'
+
+
+def test_parse_args_format_defaults_to_csv():
+    module = load_module()
+
+    args = module.parse_args([])
+
+    assert args.format == 'csv'
+
+
+def test_parse_args_accepts_json_format():
+    module = load_module()
+
+    args = module.parse_args(['--format', 'json'])
+
+    assert args.format == 'json'
+
+
+def test_parse_args_rejects_invalid_format():
+    module = load_module()
+
+    with pytest.raises(SystemExit):
+        module.parse_args(['--format', 'xml'])
 
 
 def test_print_models_suppresses_model_discovery_noise(monkeypatch, capsys):
