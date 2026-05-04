@@ -64,6 +64,7 @@ def parse_args(argv=None):
     parser.add_argument('--ensemble', dest='ensembles', type=parse_ensembles, default=list(DEFAULT_ENSEMBLES))
     parser.add_argument('--dataset', dest='datasets', type=parse_csv, default=list(DEFAULT_DATASETS))
     parser.add_argument('--metrics', type=parse_csv, default=list(DEFAULT_METRICS))
+    parser.add_argument('--gpu', type=str, default=None, help='GPU device id (e.g. "0", "0,1"). Omit to use CPU.')
     parser.add_argument('--list-models', action='store_true')
     args = parser.parse_args(argv)
     for metric in args.metrics:
@@ -77,6 +78,11 @@ def configure_import_paths():
         path_str = str(path)
         if path_str not in sys.path:
             sys.path.insert(0, path_str)
+
+
+def configure_gpu(gpu_id):
+    if gpu_id is not None:
+        os.environ['CUDA_VISIBLE_DEVICES'] = gpu_id
 
 
 def build_available_models():
@@ -302,6 +308,7 @@ def print_models():
 
 def main(argv=None):
     args = parse_args(argv)
+    configure_gpu(args.gpu)
     if args.list_models:
         print_models()
         return None

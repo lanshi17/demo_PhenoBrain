@@ -24,6 +24,25 @@ def test_parse_args_defaults_to_all_datasets_all_metrics_and_default_ensemble():
     assert args.ensembles == ['HPOP-ICT-CNB-NN']
     assert args.datasets == ['MME', 'GA4GH']
     assert args.metrics == ['top1', 'top3', 'top5', 'top10', 'top30']
+    assert args.gpu is None
+
+
+def test_configure_gpu_sets_cuda_visible_devices(monkeypatch):
+    module = load_module()
+    monkeypatch.delenv('CUDA_VISIBLE_DEVICES', raising=False)
+
+    module.configure_gpu('0')
+
+    assert module.os.environ['CUDA_VISIBLE_DEVICES'] == '0'
+
+
+def test_configure_gpu_does_not_set_env_when_none(monkeypatch):
+    module = load_module()
+    monkeypatch.delenv('CUDA_VISIBLE_DEVICES', raising=False)
+
+    module.configure_gpu(None)
+
+    assert 'CUDA_VISIBLE_DEVICES' not in module.os.environ
 
 
 def test_parse_args_accepts_comma_separated_overrides():
